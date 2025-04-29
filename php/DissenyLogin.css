@@ -11,6 +11,7 @@ body{
     justify-content: center; 
     
 }
+
 img{
     margin-top: -10rem;
     width: 15rem;
@@ -18,21 +19,28 @@ img{
 }
 h1{
     margin-bottom: -0.5rem;
+    color: #01161E;
+    font-weight: bold;
 }
 a{
     text-decoration: none;
+    font-size: 1rem;
 }
+a:hover{
+    text-decoration: none;
+    color: #EFF6E0;
+}
+
 .entra{
     display: flex;
     background-color: #124559;
     color: #EFF6E0;
-    width: 80%;
-    height: 3rem;
+    width: 90%;
+    height: auto;
     line-height: 3rem;
     border-radius: 10px;
     justify-content: center;
     margin-top: 2.5rem;
-    font-weight: 500;
     transition: ease-in-out 0.35s;
 }
 
@@ -52,15 +60,14 @@ a{
 }
 
 .enrera{
-    border: solid #01161E;
-    margin-top: 2rem;
+    display: flex;
     background-color: #01161E;
-    padding: 1rem;
-    color:#EFF6E0;
-    border-radius: 50px;
-    line-height: 0.5rem;
-    height: 0.5rem;
-    width: 8rem;
+    color: #EFF6E0;
+    width: 50%;
+    height: auto;
+    line-height: 3rem;
+    border-radius: 25px;
+    justify-content: center;
+    margin-top: 2.5rem;
     font-weight: 600;
-    transition: ease-in-out 0.5s;
 }
