@@ -1,0 +1,151 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #01161E;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(/php/img/FonsFormulari.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 3rem 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color: #EFF6E0;
+}
+#formulari{
+    padding: 0 1rem 2rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;
+    background-color: #EFF6E0;
+    height: auto;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    
+}
+#formulari h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    color: #124559;
+}
+#formulari .departaments{
+    width: 80%;
+    height: auto;
+    border-radius: 50px;
+    background-color: #EFF6E0;
+    border: solid 0.1rem #124559;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+}
+.opcio{
+    display: inline-block;
+    width: 49%;
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+fieldset label {
+    width: 100%;
+    height: auto;
+    transition: all 500ms ease;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: #EFF6E0;
+    border: solid 1px #124559;
+    padding: 0.5rem 2rem;
+}
+input[type="radio"]:checked+label {
+    background-color: #124559;
+    color: #EFF6E0;
+    border-color: #124559;
+}
+
+.dades{
+    width: 80%;
+}
+
+.grup-input{
+    display: flex;
+    flex-direction: column;
+    position:static;
+}
+.grup-input .input-label{
+
+    font-size: 0.75rem;
+    color:#124559;
+    font-weight: 700;
+    position: relative;
+    top:0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: #EFF6E0;
+    width: fit-content;
+}
+
+.grup-input .input-dintre{
+    padding: 11px 10px;
+    font-size: 1rem;
+    border: 1px #124559 solid;
+    border-radius: 5px;
+    background: #EFF6E0;
+}
+
+.grup-input .input-dintre:focus{
+    outline: none;
+}
+
+.descripcio, .botons{
+    width: 80%;
+}
+.descripcio textarea{
+    color:#124559;
+    padding: 0.5rem;
+    width: 100%;
+    height: 8rem;
+    border-radius: 8px;
+    border: solid #124559 1px;
+    background: #EFF6E0;
+}
+.descripcio textarea:focus{
+    border: solid #124559 2px;
+}
+.descripcio textarea::placeholder{
+    text-align: left;
+    top:0.5rem;
+    position: absolute;
+
+}
+
+.botons{
+    margin-top: 2rem;
+    height: 3rem;
+}
+input[type="submit"]{
+    border: none;
+    margin-left: 5rem;
+}
+.enrera, input[type="submit"]{
+    background-color: #01161E;
+    color: #EFF6E0;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out
+
+}
+input[type="submit"]:hover ,.enrera:hover{
+    border-radius: 25px;
+}
