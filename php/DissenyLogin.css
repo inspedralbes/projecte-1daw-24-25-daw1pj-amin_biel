@@ -13,19 +13,22 @@ body{
 }
 
 img{
-    margin-top: -10rem;
+    margin-top: -5rem;
     width: 15rem;
     margin-bottom: -4rem;
 }
+
 h1{
     margin-bottom: -0.5rem;
     color: #01161E;
     font-weight: bold;
 }
+
 a{
     text-decoration: none;
     font-size: 1rem;
 }
+
 a:hover{
     text-decoration: none;
     color: #EFF6E0;
