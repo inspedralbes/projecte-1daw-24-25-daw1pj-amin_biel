@@ -9,10 +9,11 @@ body {
 }
 
 header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(18, 69, 89, 0.6);
+    background-color: rgb(18, 69, 89, 0.9);
     padding: 15px 20px;
     width: 100%;
     height: 70px; 
@@ -49,17 +50,19 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-    height: 80vh;
-    text-align: left;
-    width: 80%;
+    justify-content: flex-start; 
+    height: auto; 
+    text-align: center;
+    width: 100%;
+    padding-top: 140px; 
 }
 
 h3 {
     background-color: #e0f7fa;
-    padding: 60px;
+    padding: 30px;
     border-radius: 10px;
-    width: 100%;
+    width: 80%;
+    text-align: center;
 }
 
 .article1 {
@@ -76,6 +79,7 @@ footer {
     padding: 10px;
     width: 100%;
     text-align: center;
+    margin-top: 50px;
 
 }
 
@@ -120,3 +124,33 @@ header .logout:hover {
     color: #EFF6E0;
     background-color: rgb(0, 0, 0, 0.0);
 }
+
+header .registrar {
+    text-decoration: none;
+    color: #AEC3B0;
+    margin-left: 500px;
+    transition: ease-in-out 0.5s;
+
+}
+
+header .consulta {
+    text-decoration: none;
+    color: #AEC3B0;
+    margin-left: -10px;
+    transition: ease-in-out 0.5s;
+
+}
+
+header .registrar:hover {
+    color: #EFF6E0;
+}
+
+header .consulta:hover {
+    color: #EFF6E0;
+}
+
+
+
+
+
+
