@@ -3,7 +3,7 @@ body{
     height: 100vh;
     background-color: #01161E;
     font-family: "Montserrat", sans-serif;
-    background-image: url(/php/img/Fons.jpg);
+    background-image: url(img/Fons.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 

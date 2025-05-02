@@ -1,5 +1,10 @@
 body {
-    background-image: url(/php/img/Fons.jpg);
+    height: 100%;
+    width: 100%;
+    background-image: url(img/Fons.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -55,6 +60,7 @@ main {
     text-align: center;
     width: 100%;
     padding-top: 140px; 
+    flex:1;
 }
 
 h3 {
@@ -80,7 +86,6 @@ footer {
     width: 100%;
     text-align: center;
     margin-top: 50px;
-
 }
 
 .primeralinea ul {

@@ -3,7 +3,7 @@ body{
     height: 100%;
     background-color: #01161E;
     font-family: "Montserrat", sans-serif;
-    background-image: url(/php/img/FonsFormulari.png);
+    background-image: url(img/FonsFormulari.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -96,7 +96,7 @@ input[type="radio"]:checked+label {
     width: fit-content;
 }
 
-.grup-input .input-dintre{
+.grup-input .input-dintre, select{
     padding: 11px 10px;
     font-size: 1rem;
     border: 1px #124559 solid;
@@ -131,21 +131,31 @@ input[type="radio"]:checked+label {
 }
 
 .botons{
+    display: flex;
+    justify-content: space-between;
     margin-top: 2rem;
-    height: 3rem;
+    align-items: center;
 }
 input[type="submit"]{
     border: none;
-    margin-left: 5rem;
+}
+.enrera {
+    display: inline-flex;
+    align-items: center;
 }
 .enrera, input[type="submit"]{
     background-color: #01161E;
     color: #EFF6E0;
     padding: 1rem;
+    height: 3rem;
     border-radius: 10px;
     transition: 0.2s ease-in-out
 
 }
 input[type="submit"]:hover ,.enrera:hover{
     border-radius: 25px;
+}
+option, select{
+    background-color: #EFF6E0;
+    color: #124559;
 }
