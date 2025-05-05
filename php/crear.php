@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }else{
     ?>
-<form id="formulari" action="./crear.php" method="post">
+<form id="formulari" action="./index.php" method="post">
         <h1>DEPARTAMENTS</h1>
         <div class="departaments">
             <fieldset>
@@ -81,23 +81,60 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="idBiblio">Biblioteca</label>
                 </div>
             </fieldset>
-        </div>  
+        </div>
+
+        <h1>DADES DE CONTACTE</h1>
+        <div class="dades">
+            <div class="grup-input">
+                <label for="nom" class="input-label">Nom</label>
+                <input type="text" name="nom" id="nom" class="input-dintre" placeholder=" ">
+            </div>
+            <div class="grup-input">
+                <label for="cognom" class="input-label">Cognom</label>
+                <input type="text" name="cognom" id="cognom" class="input-dintre" placeholder=" ">
+            </div>
+            <div class="grup-input">
+                <label for="email" class="input-label">Email</label>
+                <input type="email" name="email" id="email" class="input-dintre" placeholder=" ">
+            </div>
+            <div class="grup-input">
+                <label for="curs" class="input-label">Curs</label>
+                <select name="curs" id="curs">
+                    <option value="1rEso">1r d'ESO</option>
+                    <option value="2nEso">2n d'ESO</option>
+                    <option value="3rEso">3r d'ESO</option>
+                    <option value="4tEso">4t d'ESO</option>
+                    <option value="1rGrauMitja">1r de Grau Mitjà</option>
+                    <option value="2nGrauMitja">2n de Grau Mitjà</option>
+                    <option value="1rGrauSuperior">1r de Grau Superior</option>
+                    <option value="2nGrauSuperior">2n de Grau Superior</option>
+                    <option value="1rBatxillerat">1r de Batxillerat</option>
+                    <option value="2nBatxillerat">2n de Batxillerat</option>
+                </select>
+            </div>
+    
+        </div>
+            
 
         <h1>DESCRIPCIÓ INCIDÈNCIA</h1>
         <div class="descripcio">
-            <label for="descripcio" class="descripcio-label"></label>
-            <textarea name="descripcio" id="descripcio" class="descripcio-input" placeholder="El problema que tinc és..."></textarea>
+            
+            <label for="descripcio"  class="descripcio-label"></label>
+            <textarea id="descripcio" name="descripcio" class="descripcio-input" placeholder="El problema que tinc és..."></textarea>
+            
+            <div class="grup-input">
+                <label for="ordinador" class="input-label">Nº Ordinador</label>
+                <input type="number" name="ordinador" id="ordinador" class="input-dintre" placeholder="Numero Ordinador " min="1" max="60">
+            </div>
         </div>
         
     <div class="botons">
         <a href="PaginaUsuari.html" class="enrera">Enrere</a>
-        
         <input type="submit" value="Envia">
-       
         
     </div>
 
-</form>
+    </form>
 
 
 

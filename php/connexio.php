@@ -13,7 +13,7 @@
     // Amb la següent línia, el codi en cas d'error de mysql ja no aboratarà i ho podreu
     // gestionar vosaltres mateixos.
     // mysqli_report(MYSQLI_REPORT_OFF);
-    
+    //prova de si funciona
     // Crear la connexió
     $conn = new mysqli($servername, $username, $password, $dbname);
 
