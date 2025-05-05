@@ -77,6 +77,7 @@ function obtenirIdUsuari($conn, $email, $nom, $cognom, $curs){
     return $nouId;
 }
 
+
 $errors = -1; 
 $id = ""; 
 
