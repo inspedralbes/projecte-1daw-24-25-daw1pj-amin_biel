@@ -29,7 +29,7 @@ services:
       # És millor no crear la BBDD aquí, ja que no pots control·lar la codificació
       # de caràcters i aleshores donarà problemes amb accents i caràcters especials
       # La BBDD es crearà a l'inici del contenidor amb els script d'inicialització
-      # MYSQL_DATABASE: persones
+      # MYSQL_DATABASE: a24biedommar_ProjecteFinal_MySql
       MYSQL_USER: usuari
       MYSQL_PASSWORD: paraula_de_pas
       LANG: C.UTF-8
