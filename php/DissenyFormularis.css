@@ -10,7 +10,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 0 3rem 0;
+}
+.centrar{
+    width: 100%;
+    height: 100vh;
+    background-color: #01161E;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(img/FonsFormulari.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 a{
     text-decoration: none;
@@ -31,6 +43,7 @@ a:hover{
     width: 50%;
     border-radius: 15px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    margin: 3rem 0 3rem 0;
     
 }
 #formulari h1{
@@ -96,7 +109,7 @@ input[type="radio"]:checked+label {
     width: fit-content;
 }
 
-.grup-input .input-dintre, select{
+.grup-input .input-dintre, select, .barra-resultat{
     padding: 11px 10px;
     font-size: 1rem;
     border: 1px #124559 solid;
@@ -108,7 +121,7 @@ input[type="radio"]:checked+label {
     outline: none;
 }
 
-.descripcio, .botons{
+.descripcio, .botons-codi{
     width: 80%;
 }
 .descripcio textarea{
@@ -130,7 +143,8 @@ input[type="radio"]:checked+label {
 
 }
 
-.botons{
+.botons, .botons-codi{
+    width: 80%;
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
@@ -139,11 +153,11 @@ input[type="radio"]:checked+label {
 input[type="submit"]{
     border: none;
 }
-.enrera {
+.enrera, .continuar {
     display: inline-flex;
     align-items: center;
 }
-.enrera, input[type="submit"]{
+.enrera, input[type="submit"], .continuar{
     background-color: #01161E;
     color: #EFF6E0;
     padding: 1rem;
@@ -152,10 +166,16 @@ input[type="submit"]{
     transition: 0.2s ease-in-out
 
 }
-input[type="submit"]:hover ,.enrera:hover{
+input[type="submit"]:hover ,.enrera:hover, .continuar:hover{
     border-radius: 25px;
 }
 option, select{
     background-color: #EFF6E0;
     color: #124559;
+}
+.barra-resultat{
+    width: 80%;
+}
+.barra-informativa{
+    width: 90%;;
 }
