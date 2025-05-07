@@ -26,17 +26,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php 
         $cicle = $_POST['cicles'];
         $descripcio = $_POST['descripcio'];
+        $ordinador = $_POST['ordinador'];
 
-        $id_departament = 1;
-        $id_usuari = 1;
+        $result = $conn->query("SELECT ID_DEPARTAMENT FROM DEPARTAMENTS WHERE DESCRIPCIO = '$cicle'");
+        $row = $result->fetch_assoc();
+        $id_departament = $row['ID_DEPARTAMENT'];      
 
-        $sql = "INSERT INTO INCIDENCIES (NOM_DEPARTAMENT, DATA_INICI, DESCRIPCIO)
-        VALUES ('$cicle', SYSDATE(), '$descripcio')";
+        $sql = "INSERT INTO INCIDENCIES (ID_DEPARTAMENT, DATA_INICI, DESCRIPCIO,ORDINADOR)
+        VALUES ('$id_departament', SYSDATE(), '$descripcio', '$ordinador')";
 
         $conn->query($sql);
 
-        echo "<h1>Tot Correcte!</h1>";
-        echo"</div>";
+        $id_incidencia = $conn->insert_id;
+
+        ?>
+        <h1>LA TEVA INCIDENCIA HA ESTAT ENREGISTRADA CORRECTAMENT!</h1>
+        <?php
+        echo "<p>El codi de la teva incidencia és: $id_incidencia</p>" ?>
+        <div class="botons">
+            <a href="PaginaUsuari.html" class="enrera">Enrere</a>
+            <a href="./crear.php" class="enrera">Inserir una altre</a>
+        </div>
+              
+    </div>
+    <?php
 }else{
     ?>
 <form id="formulari" action="./crear.php" method="post">
@@ -91,7 +104,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             <label for="descripcio"  class="descripcio-label"></label>
             <textarea id="descripcio" name="descripcio" class="descripcio-input" placeholder="El problema que tinc és..."></textarea>
-            
+            <div class="grup-input">
+                <label for="ordinador" class="input-label">Nº Ordinador</label>
+                <input type="number" name ="ordinador"  id="ordinador" class="input-dintre" placeholder="Numero Ordinador " min="1" max="60">
+            </div>
         </div>
         
     <div class="botons">
