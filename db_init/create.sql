@@ -23,7 +23,6 @@ CREATE DATABASE IF NOT EXISTS persones
 GRANT ALL PRIVILEGES ON persones.* TO 'usuari'@'%';
 FLUSH PRIVILEGES;
 
-
 -- Després de crear la base de dades, cal seleccionar-la per treballar-hi
 USE persones;
 
