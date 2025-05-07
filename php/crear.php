@@ -32,8 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = $result->fetch_assoc();
         $id_departament = $row['ID_DEPARTAMENT'];      
 
-        $sql = "INSERT INTO INCIDENCIES (ID_DEPARTAMENT, DATA_INICI, DESCRIPCIO,ORDINADOR)
-        VALUES ('$id_departament', SYSDATE(), '$descripcio', '$ordinador')";
+        $resultat = $result = $conn->query("SELECT ID_TECNIC FROM TECNICS WHERE ID_DEPARTAMENT = '$id_departament'");
+        $row = $resultat->fetch_assoc();
+        $id_tecnic = $row['ID_TECNIC'];  
+
+        $sql = "INSERT INTO INCIDENCIES (ID_DEPARTAMENT, DATA_INICI, DESCRIPCIO,ORDINADOR,ID_TECNIC)
+        VALUES ('$id_departament', SYSDATE(), '$descripcio', '$ordinador', '$id_tecnic')";
 
         $conn->query($sql);
 
