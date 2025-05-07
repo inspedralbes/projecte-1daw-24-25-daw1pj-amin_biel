@@ -55,6 +55,7 @@ a:hover{
 }
 #formulari-llistat{
     width: auto;
+    padding: 0 2rem 0 ;
 }
 #formulari .departaments{
     width: 80%;
@@ -155,6 +156,11 @@ input[type="radio"]:checked+label {
     margin-top: 2rem;
     align-items: center;
 }
+.boto-llistat{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
 input[type="submit"]{
     border: none;
 }
@@ -182,14 +188,29 @@ option, select{
     width: 80%;
 }
 .barra-informativa{
-    width: 90%;;
+    width: 90%;
 }
-#taula-llistat{
-    border-collapse: collapse;
-    border: solid #124559 0.01rem;
-    border-radius: 10px;
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: solid #124559 2px;
+    border-radius: 15px;
+    display: block;
 }
-td, th {
-    border: 1px dotted black;
-    padding: 1rem;
-  }
+
+table th, table td {
+    border: none;
+    padding: 10px;
+    border-top: 1px dotted #124559;
+    border-left: 1px dotted #124559;
+}
+
+table tr:first-child th{
+    border-top: none;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+    border-left: none;
+}
