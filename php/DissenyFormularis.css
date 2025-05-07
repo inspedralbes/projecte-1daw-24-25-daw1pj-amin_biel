@@ -31,7 +31,7 @@ a:hover{
     text-decoration: none;
     color: #EFF6E0;
 }
-#formulari{
+#formulari, #formulari-llistat{
     padding: 0 1rem 2rem;
     text-align: center;
     justify-content: center;
@@ -40,16 +40,21 @@ a:hover{
     align-items: center;
     background-color: #EFF6E0;
     height: auto;
-    width: 50%;
+    
     border-radius: 15px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
     margin: 3rem 0 3rem 0;
-    
 }
-#formulari h1{
+#formulari h1, #formulari-llistat h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight:lighter;
     color: #124559;
+}
+#fomulari{
+    width: 50%;
+}
+#formulari-llistat{
+    width: auto;
 }
 #formulari .departaments{
     width: 80%;
@@ -179,3 +184,12 @@ option, select{
 .barra-informativa{
     width: 90%;;
 }
+#taula-llistat{
+    border-collapse: collapse;
+    border: solid #124559 0.01rem;
+    border-radius: 10px;
+}
+td, th {
+    border: 1px dotted black;
+    padding: 1rem;
+  }

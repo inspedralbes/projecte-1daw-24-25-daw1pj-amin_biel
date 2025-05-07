@@ -30,12 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id_departament = 1;
         $id_usuari = 1;
 
-        $sql = "INSERT INTO INCIDENCIES (NOM_DEPARTAMENT, DATA_INICI, DESCRIPCIO) VALUES ('$cicle', SYSDATE(), '$descripcio')";
+        $sql = "INSERT INTO INCIDENCIES (NOM_DEPARTAMENT, DATA_INICI, DESCRIPCIO)
+        VALUES ('$cicle', SYSDATE(), '$descripcio')";
 
         $conn->query($sql);
 
         echo "<h1>Tot Correcte!</h1>";
-    echo"</div>";
+        echo"</div>";
 }else{
     ?>
 <form id="formulari" action="./crear.php" method="post">
