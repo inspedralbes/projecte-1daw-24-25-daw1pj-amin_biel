@@ -66,7 +66,7 @@ require "connexio.php";
                 ?>
                     </table>
                         <div class="botons">
-                            <a class="enrera"  href="PaginaUsuari.html">Enrera</a>
+                            <a class="enrera"  href="PaginaTecnic.html">Enrera</a>
                             <a class="enrera"  href="./llistatTecnics.php">Buscar més</a>
                         </div>
                 </div>
@@ -77,7 +77,7 @@ require "connexio.php";
                     <div id="formulari-llistat">
                         <h1>NO TENS CAP ASSIGNACIÓ</h1>
                         <div class="botons">
-                                <a class="enrera"  href="PaginaUsuari.html">Enrera</a>
+                                <a class="enrera"  href="PaginaTecnic.html">Enrera</a>
                                 <a class="enrera"  href="./llistatTecnics.php">Buscar més</a>
                         </div>
                     </div>
