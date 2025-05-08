@@ -26,13 +26,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php 
         $cicle = $_POST['cicles'];
         $descripcio = $_POST['descripcio'];
+        $descripcio = $conn->real_escape_string($descripcio);
         $ordinador = $_POST['ordinador'];
+
+        
 
         $result = $conn->query("SELECT ID_DEPARTAMENT FROM DEPARTAMENTS WHERE DESCRIPCIO = '$cicle'");
         $row = $result->fetch_assoc();
         $id_departament = $row['ID_DEPARTAMENT'];      
 
-        $resultat = $result = $conn->query("SELECT ID_TECNIC FROM TECNICS WHERE ID_DEPARTAMENT = '$id_departament'");
+        $resultat = $conn->query("SELECT ID_TECNIC FROM TECNICS WHERE ID_DEPARTAMENT = '$id_departament'");
         $row = $resultat->fetch_assoc();
         $id_tecnic = $row['ID_TECNIC'];  
 
