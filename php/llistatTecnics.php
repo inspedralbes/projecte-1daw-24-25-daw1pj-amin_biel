@@ -21,11 +21,12 @@ require "connexio.php";
             $id_tecnic = $_POST['id_tecnic'];
 
             $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, 
-                   D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, T.ID_TECNIC 
+                   D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, T.ID_TECNIC, P.DESCRIPCIO AS NOM_PRIORITAT
             FROM INCIDENCIES I
             JOIN DEPARTAMENTS D ON I.ID_DEPARTAMENT = D.ID_DEPARTAMENT
             JOIN ESTAT E ON I.ID_ESTAT = E.ID_ESTAT
             JOIN TECNICS T ON I.ID_TECNIC = T.ID_TECNIC
+            JOIN PRIORITAT P ON I.ID_PRIORITAT = P.ID_PRIORITAT
             WHERE I.ID_TECNIC = ?
             ORDER BY I.ID_INCIDENCIA ASC";
             $stmt = $conn->prepare($sql);
@@ -48,6 +49,7 @@ require "connexio.php";
                             <th>DATA_INICI</th>
                             <th>DESCRIPCIO</th>
                             <th>ESTAT</th>
+                            <th>PRIORITAT</th>
                         </tr>
                       </thead>
                 <?php
@@ -61,6 +63,7 @@ require "connexio.php";
                     echo "<td>" . htmlspecialchars($row["DATA_INICI"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["DESCRIPCIO"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["NOM_ESTAT"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["NOM_PRIORITAT"]) . "</td>";
                     echo "</tr>";
                 }
                 ?>
