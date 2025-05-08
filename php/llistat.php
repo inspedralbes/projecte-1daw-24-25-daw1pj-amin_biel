@@ -9,8 +9,10 @@ require "connexio.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Llistat d'incidències</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Normalize.css">
-    <link rel="stylesheet" href="estils.css">
+    <link rel="stylesheet" href="DissenyFormularis.css">
 </head>
 
 <body>
@@ -28,8 +30,22 @@ require "connexio.php";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "<table border='1'>";
-        echo "<tr><th>ID</th><th>Data Inici</th><th>Descripció</th><th>Departament</th><th>Estat</th><th>Ordinador</th><th>Tècnic</th><th>Accions</th></tr>";
+        ?>
+        <div id="formulari-llistat">
+            <h1>INCIDENCIES ASSIGNADES</h1>
+            <table id="taula-llistat">
+            <thead>
+              <tr>
+                  <th>ID_INCIDENCIA</th>
+                  <th>ID_TECNIC</th>
+                  <th>DEPARTAMENT</th>
+                  <th>ORDINADOR</th>
+                  <th>DATA_INICI</th>
+                  <th>DESCRIPCIO</th>
+                  <th>ESTAT</th>
+              </tr>
+            </thead>
+        <?php
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . htmlspecialchars($row["ID_INCIDENCIA"]) . "</td>";
@@ -45,7 +61,13 @@ require "connexio.php";
                   </td>";
             echo "</tr>";
         }
-        echo "</table>";
+        ?> 
+        </table>
+            <div class="boto-llistat">
+              <a class="enrera"  href="hola">Enrera</a>
+            </div>
+        </div>
+        <?php
     } else {
         echo "<p>No hi ha incidències registrades.</p>";
     }

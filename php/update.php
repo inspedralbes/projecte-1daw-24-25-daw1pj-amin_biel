@@ -26,10 +26,14 @@ if (!$incidencia) {
     die("Error: La incidència no existeix.");
 }
 
-// Si s'envia el formulari, actualitzar la incidència
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nou_estat = $_POST["id_estat"];
-    $nou_tecnic = $_POST["id_tecnic"];
+    // Capturar valors seleccionats
+    $nou_estat = isset($_POST["id_estat"]) ? intval($_POST["id_estat"]) : $incidencia["ID_ESTAT"];
+    $nou_tecnic = isset($_POST["id_tecnic"]) ? intval($_POST["id_tecnic"]) : $incidencia["ID_TECNIC"];
+
+    // Comprovar que els valors s'han capturat correctament
+    echo "<p>Debug: Estat seleccionat -> $nou_estat</p>";
+    echo "<p>Debug: Tècnic seleccionat -> $nou_tecnic</p>";
 
     $sql_update = "UPDATE INCIDENCIES SET ID_ESTAT = ?, ID_TECNIC = ? WHERE ID_INCIDENCIA = ?";
     $stmt_update = $conn->prepare($sql_update);
@@ -76,7 +80,7 @@ $conn->close();
                 <td><?= htmlspecialchars($incidencia["ORDINADOR"]) ?></td>
                 <td>
                     <select name="id_estat">
-                        <option value="1" <?= $incidencia["ID_ESTAT"] == 1 ? "selected" : "" ?>>Sense Assignar</option>
+                        <option value="1" <?= $incidencia["ID_ESTAT"] == 1 ? "selected" : "" ?>>Assignada</option>
                         <option value="2" <?= $incidencia["ID_ESTAT"] == 2 ? "selected" : "" ?>>En Procés</option>
                         <option value="3" <?= $incidencia["ID_ESTAT"] == 3 ? "selected" : "" ?>>Acabada</option>
                     </select>
@@ -84,8 +88,16 @@ $conn->close();
                 <td>
                     <select name="id_tecnic">
                         <option value="1" <?= $incidencia["ID_TECNIC"] == 1 ? "selected" : "" ?>>Miquel Garcia</option>
-                        <option value="2" <?= $incidencia["ID_TECNIC"] == 2 ? "selected" : "" ?>>Laura Torres</option>
-                        <option value="3" <?= $incidencia["ID_TECNIC"] == 3 ? "selected" : "" ?>>Jordi Puig</option>
+                        <option value="2" <?= $incidencia["ID_TECNIC"] == 2 ? "selected" : "" ?>>Lautaro Garcia</option>
+                        <option value="3" <?= $incidencia["ID_TECNIC"] == 3 ? "selected" : "" ?>>Laura Torres</option>
+                        <option value="4" <?= $incidencia["ID_TECNIC"] == 4 ? "selected" : "" ?>>Jordi Puig</option>
+                        <option value="5" <?= $incidencia["ID_TECNIC"] == 5 ? "selected" : "" ?>>Anna Soler</option>
+                        <option value="6" <?= $incidencia["ID_TECNIC"] == 6 ? "selected" : "" ?>>Pau Vidal</option>
+                        <option value="7" <?= $incidencia["ID_TECNIC"] == 7 ? "selected" : "" ?>>Clara Riera</option>
+                        <option value="8" <?= $incidencia["ID_TECNIC"] == 8 ? "selected" : "" ?>>Marc Ferrer</option>
+                        <option value="9" <?= $incidencia["ID_TECNIC"] == 9 ? "selected" : "" ?>>Núria Pons</option>
+                        <option value="9" <?= $incidencia["ID_TECNIC"] == 9 ? "selected" : "" ?>>Oriol Martí</option>
+
                     </select>
                 </td>
             </tr>
