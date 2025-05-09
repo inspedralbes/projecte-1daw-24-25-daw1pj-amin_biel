@@ -4,9 +4,13 @@ require "connexio.php";
 
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
-    <title>Llistat d'incidències</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llistat Administrador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Normalize.css">
     <link rel="stylesheet" href="DissenyFormularis.css">
 </head>
@@ -60,7 +64,7 @@ require "connexio.php";
             echo "<td>" . htmlspecialchars($row["NOM_TIPUS"]) . "</td>";
 
             echo "<td>
-                    <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a>  
+                    <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a> 
                     <a href='update.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
                   </td>";
             echo "</tr>";
@@ -78,7 +82,7 @@ require "connexio.php";
             <div id="formulari-llistat">
                 <h1>NO TENS CAP ASSIGNACIÓ</h1>
                 <div class="boto-llistat">
-                <a class="enrera" href="PaginaAdministrador.html">Enrere</a>
+                <a class="enrera" href="PaginaAdministrador.html">Pene</a>
                 </div>
             </div>
         </div>

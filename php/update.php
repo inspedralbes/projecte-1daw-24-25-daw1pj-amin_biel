@@ -50,66 +50,80 @@ $conn->close();
 <!DOCTYPE html>
 <html lang="ca">
 <head>
+    <head>
     <meta charset="UTF-8">
-    <title>Editar Incidència</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Administrador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Normalize.css">
+    <link rel="stylesheet" href="DissenyFormularis.css">
 </head>
 <body>
-    <h1>Editar Incidència</h1>
-
-    <form method="POST">
-        <table border="1">
-            <tr>
-                <th>INCIDENCIA</th><th>TECNIC</th><th>ID_TECNIC</th><th>DEPARTAMENT</th><th>ORDINADOR</th><th>DATA_INICI</th><th>DESCRIPCIO</th><th>ESTAT</th><th>PRIORITAT</th><th>TIPUS</th>
-            </tr>
-            <tr>
-                <td><?= htmlspecialchars($incidencia["ID_INCIDENCIA"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["NOM_TECNIC"]) ?></td>
-                <td>
-                    <select name="id_tecnic">
-                        <option value="1" <?= $incidencia["ID_TECNIC"] == 1 ? "selected" : "" ?>>Miquel Garcia</option>
-                        <option value="2" <?= $incidencia["ID_TECNIC"] == 2 ? "selected" : "" ?>>Lautaro Garcia</option>
-                        <option value="3" <?= $incidencia["ID_TECNIC"] == 3 ? "selected" : "" ?>>Laura Torres</option>
-                        <option value="4" <?= $incidencia["ID_TECNIC"] == 4 ? "selected" : "" ?>>Jordi Puig</option>
-                        <option value="5" <?= $incidencia["ID_TECNIC"] == 5 ? "selected" : "" ?>>Anna Soler</option>
-                        <option value="6" <?= $incidencia["ID_TECNIC"] == 6 ? "selected" : "" ?>>Pau Vidal</option>
-                        <option value="7" <?= $incidencia["ID_TECNIC"] == 7 ? "selected" : "" ?>>Clara Riera</option>
-                        <option value="8" <?= $incidencia["ID_TECNIC"] == 8 ? "selected" : "" ?>>Marc Ferrer</option>
-                        <option value="9" <?= $incidencia["ID_TECNIC"] == 9 ? "selected" : "" ?>>Núria Pons</option>
-                        <option value="10" <?= $incidencia["ID_TECNIC"] == 10 ? "selected" : "" ?>>Oriol Martí</option>
-                    </select>
-                </td>
-                <td><?= htmlspecialchars($incidencia["NOM_DEPARTAMENT"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["ORDINADOR"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["DATA_INICI"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["DESCRIPCIO"]) ?></td>
-                <td><?= isset($incidencia["NOM_ESTAT"]) ? htmlspecialchars($incidencia["NOM_ESTAT"]) : "" ?></td>
-                <td>
-                    <select name="id_prioritat">
-                        <option value="1">Cap</option>
-                        <option value="2">Baixa</option>
-                        <option value="3">Mitjana</option>
-                        <option value="4">Alta</option>
-                        <option value="5">Crítica</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="id_tipus">
-                        <option value="1">Sense Assignar</option>
-                        <option value="2">Xarxa</option>
-                        <option value="3">Ratolí</option>
-                        <option value="4">Teclat</option>
-                        <option value="5">Connexió a Internet</option>
-                        <option value="6">Pantalla</option>
-                        <option value="7">Software</option>
-                        <option value="8">Servidor</option>
-                        <option value="9">Correu Electrònic</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <button type="submit">Guardar Canvis</button>
-    </form>
-
-    <a href="llistat.php">Tornar al llistat</a>
+    <div class="centrar">
+        <form id="formulari-llistat"method="POST">
+            <h1>Editar Incidència</h1>
+            <table>
+                <tr>
+                    <th>INCIDENCIA</th><th>TECNIC</th><th>ID_TECNIC</th><th>DEPARTAMENT</th><th>ORDINADOR</th><th>DATA_INICI</th><th>DESCRIPCIO</th><th>ESTAT</th><th>PRIORITAT</th><th>TIPUS</th>
+                </tr>
+                <tr>
+                    <td><?= htmlspecialchars($incidencia["ID_INCIDENCIA"]) ?></td>
+                    <td><?= htmlspecialchars($incidencia["NOM_TECNIC"]) ?></td>
+                    <td>
+                        <div class="grup-input">
+                            <select name="id_tecnic">
+                                <option value="1" <?= $incidencia["ID_TECNIC"] == 1 ? "selected" : "" ?>>Miquel Garcia</option>
+                                <option value="2" <?= $incidencia["ID_TECNIC"] == 2 ? "selected" : "" ?>>Lautaro Garcia</option>
+                                <option value="3" <?= $incidencia["ID_TECNIC"] == 3 ? "selected" : "" ?>>Laura Torres</option>
+                                <option value="4" <?= $incidencia["ID_TECNIC"] == 4 ? "selected" : "" ?>>Jordi Puig</option>
+                                <option value="5" <?= $incidencia["ID_TECNIC"] == 5 ? "selected" : "" ?>>Anna Soler</option>
+                                <option value="6" <?= $incidencia["ID_TECNIC"] == 6 ? "selected" : "" ?>>Pau Vidal</option>
+                                <option value="7" <?= $incidencia["ID_TECNIC"] == 7 ? "selected" : "" ?>>Clara Riera</option>
+                                <option value="8" <?= $incidencia["ID_TECNIC"] == 8 ? "selected" : "" ?>>Marc Ferrer</option>
+                                <option value="9" <?= $incidencia["ID_TECNIC"] == 9 ? "selected" : "" ?>>Núria Pons</option>
+                                <option value="10" <?= $incidencia["ID_TECNIC"] == 10 ? "selected" : "" ?>>Oriol Martí</option>
+                            </select>
+                        </div>    
+                    </td>
+                    <td><?= htmlspecialchars($incidencia["NOM_DEPARTAMENT"]) ?></td>
+                    <td><?= htmlspecialchars($incidencia["ORDINADOR"]) ?></td>
+                    <td><?= htmlspecialchars($incidencia["DATA_INICI"]) ?></td>
+                    <td><?= htmlspecialchars($incidencia["DESCRIPCIO"]) ?></td>
+                    <td><?= isset($incidencia["NOM_ESTAT"]) ? htmlspecialchars($incidencia["NOM_ESTAT"]) : "" ?></td>
+                    <td>
+                        <div class="grup-input">
+                            <select name="id_prioritat">
+                                <option value="1">Cap</option>
+                                <option value="2">Baixa</option>
+                                <option value="3">Mitjana</option>
+                                <option value="4">Alta</option>
+                                <option value="5">Crítica</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="grup-input">
+                            <select name="id_tipus">
+                                <option value="1">Sense Assignar</option>
+                                <option value="2">Xarxa</option>
+                                <option value="3">Ratolí</option>
+                                <option value="4">Teclat</option>
+                                <option value="5">Connexió a Internet</option>
+                                <option value="6">Pantalla</option>
+                                <option value="7">Software</option>
+                                <option value="8">Servidor</option>
+                                <option value="9">Correu Electrònic</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="botons-update">
+                <a class="enrera"href="llistat.php">Tornar</a>
+                <button type="submit">Guardar Canvis</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

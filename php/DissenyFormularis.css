@@ -126,9 +126,11 @@ input[type="radio"]:checked+label {
 .grup-input .input-dintre:focus{
     outline: none;
 }
-
-.descripcio, .botons-codi{
+.descripcio{
     width: 80%;
+}
+.botons-codi{
+    width: 100%;
 }
 .descripcio textarea{
     color:#124559;
@@ -148,9 +150,11 @@ input[type="radio"]:checked+label {
     position: absolute;
 
 }
-
 .botons, .botons-codi{
     width: 80%;
+}
+
+.botons, .botons-codi, .boto-llistat{
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
@@ -158,18 +162,25 @@ input[type="radio"]:checked+label {
     align-items: center;
 }
 .boto-llistat{
+    width: 100%;
     display: flex;
     justify-content: center;
     margin: 2rem;
 }
-input[type="submit"]{
+.botons-update{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+input[type="submit"],button[type="submit"]{
     border: none;
 }
 .enrera, .continuar {
     display: inline-flex;
     align-items: center;
 }
-.enrera, input[type="submit"], .continuar{
+.enrera, input[type="submit"], .continuar, button[type="submit"]{
     background-color: #01161E;
     color: #EFF6E0;
     padding: 1rem;
@@ -178,7 +189,7 @@ input[type="submit"]{
     transition: 0.2s ease-in-out
 
 }
-input[type="submit"]:hover ,.enrera:hover, .continuar:hover{
+input[type="submit"]:hover ,.enrera:hover, .continuar:hover,button[type="submit"]:hover{
     border-radius: 25px;
 }
 option, select{
