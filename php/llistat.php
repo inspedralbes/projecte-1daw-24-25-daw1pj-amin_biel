@@ -4,7 +4,6 @@ require "connexio.php";
 
 <!DOCTYPE html>
 <html lang="ca">
-
 <head>
     <meta charset="UTF-8">
     <title>Llistat d'incidències</title>
@@ -15,12 +14,13 @@ require "connexio.php";
 <body>
     <?php
     $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, I.ID_ESTAT, T.NOM_TECNIC, T.ID_TECNIC,
-                   D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, P.DESCRIPCIO AS NOM_PRIORITAT
+                   D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, P.DESCRIPCIO AS NOM_PRIORITAT, TIP.DESCRIPCIO AS NOM_TIPUS
             FROM INCIDENCIES I
             JOIN DEPARTAMENTS D ON I.ID_DEPARTAMENT = D.ID_DEPARTAMENT
             JOIN ESTAT E ON I.ID_ESTAT = E.ID_ESTAT
             JOIN TECNICS T ON I.ID_TECNIC = T.ID_TECNIC
             JOIN PRIORITAT P ON I.ID_PRIORITAT = P.ID_PRIORITAT
+            JOIN TIPUS_INCIDENCIA TIP ON I.ID_TIPUS_INCIDENCIA = TIP.ID_TIPUS
             ORDER BY I.ID_INCIDENCIA ASC";
 
     $result = $conn->query($sql);
@@ -32,8 +32,8 @@ require "connexio.php";
             <table id="taula-llistat">
             <thead>
               <tr>
-                  <th>ID_INCIDENCIA</th>
-                  <th>NOM_TECNIC</th>
+                  <th>INCIDENCIA</th>
+                  <th>TECNIC</th>
                   <th>ID_TECNIC</th>
                   <th>DEPARTAMENT</th>
                   <th>ORDINADOR</th>
@@ -41,6 +41,7 @@ require "connexio.php";
                   <th>DESCRIPCIO</th>
                   <th>ESTAT</th>
                   <th>PRIORITAT</th>
+                  <th>TIPUS</th>
                   <th>ACCIONS</th>
               </tr>
             </thead>
@@ -56,9 +57,10 @@ require "connexio.php";
             echo "<td>" . htmlspecialchars($row["DESCRIPCIO"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["NOM_ESTAT"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["NOM_PRIORITAT"]) . "</td>";
+            echo "<td>" . htmlspecialchars($row["NOM_TIPUS"]) . "</td>";
 
             echo "<td>
-                    <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a> | 
+                    <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a>  
                     <a href='update.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
                   </td>";
             echo "</tr>";
@@ -76,7 +78,7 @@ require "connexio.php";
             <div id="formulari-llistat">
                 <h1>NO TENS CAP ASSIGNACIÓ</h1>
                 <div class="boto-llistat">
-                <a class="enrera" href="PaginaAdministrador.html">Enrera</a>
+                <a class="enrera" href="PaginaAdministrador.html">Enrere</a>
                 </div>
             </div>
         </div>
