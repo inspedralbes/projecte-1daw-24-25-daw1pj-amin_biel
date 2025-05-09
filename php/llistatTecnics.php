@@ -8,7 +8,7 @@ require "connexio.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llistat d'incidències</title>
+    <title>Llistat d'incidències dels tècnics</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Normalize.css">
@@ -20,15 +20,17 @@ require "connexio.php";
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_tecnic"])) {
             $id_tecnic = $_POST['id_tecnic'];
 
-            $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, 
-                   D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, T.ID_TECNIC, P.DESCRIPCIO AS NOM_PRIORITAT
+            $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, I.ID_TIPUS_INCIDENCIA,
+                   D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, T.NOM_TECNIC, T.ID_TECNIC, P.DESCRIPCIO AS NOM_PRIORITAT, TIP.DESCRIPCIO AS NOM_TIPUS
             FROM INCIDENCIES I
             JOIN DEPARTAMENTS D ON I.ID_DEPARTAMENT = D.ID_DEPARTAMENT
             JOIN ESTAT E ON I.ID_ESTAT = E.ID_ESTAT
             JOIN TECNICS T ON I.ID_TECNIC = T.ID_TECNIC
             JOIN PRIORITAT P ON I.ID_PRIORITAT = P.ID_PRIORITAT
+            JOIN TIPUS_INCIDENCIA TIP ON I.ID_TIPUS_INCIDENCIA = TIP.ID_TIPUS
             WHERE I.ID_TECNIC = ?
             ORDER BY I.ID_INCIDENCIA ASC";
+            
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("i", $id_tecnic);
             $stmt->execute();
@@ -38,18 +40,21 @@ require "connexio.php";
                 ?>
                 
                 <div id="formulari-llistat">
-                  <h1>INCIDENCIES ASSIGNADES</h1>
+                  <h1>INCIDÈNCIES ASSIGNADES AL TÈCNIC</h1>
                     <table id="taula-llistat">
                       <thead>
                         <tr>
-                            <th>ID_INCIDENCIA</th>
+                            <th>INCIDENCIA</th>
+                            <th>TECNIC</th>
                             <th>ID_TECNIC</th>
                             <th>DEPARTAMENT</th>
                             <th>ORDINADOR</th>
                             <th>DATA_INICI</th>
-                            <th>DESCRIPCIO</th>
+                            <th>DESCRIPCIÓ</th>
                             <th>ESTAT</th>
                             <th>PRIORITAT</th>
+                            <th>TIPUS</th>
+                            <th>ACCIONS</th>
                         </tr>
                       </thead>
                 <?php
@@ -57,6 +62,7 @@ require "connexio.php";
                     
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($row["ID_INCIDENCIA"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["NOM_TECNIC"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["ID_TECNIC"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["NOM_DEPARTAMENT"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["ORDINADOR"]) . "</td>";
@@ -64,6 +70,11 @@ require "connexio.php";
                     echo "<td>" . htmlspecialchars($row["DESCRIPCIO"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["NOM_ESTAT"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["NOM_PRIORITAT"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["NOM_TIPUS"]) . "</td>";
+                    echo "<td>
+                            <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a>  
+                            <a href='updateTecnics.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
+                          </td>";
                     echo "</tr>";
                 }
                 ?>
@@ -103,12 +114,8 @@ require "connexio.php";
             </div>
             <div class="botons">
                 <a href="PaginaUsuari.html" class="enrera">Enrere</a>
-            
                 <input type="submit" value="Envia">
-        
-            
             </div>
-
         </form>
     </div>
     <?php
