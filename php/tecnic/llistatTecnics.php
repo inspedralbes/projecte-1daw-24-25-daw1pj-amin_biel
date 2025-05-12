@@ -1,5 +1,5 @@
 <?php
-require "connexio.php"; 
+require "../connexio.php"; 
 ?>
 
 <!DOCTYPE html>
@@ -11,8 +11,8 @@ require "connexio.php";
     <title>Llistat d'incidències dels tècnics</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Normalize.css">
-    <link rel="stylesheet" href="DissenyFormularis.css">
+    <link rel="stylesheet" href="../Normalize.css">
+    <link rel="stylesheet" href="../DissenyFormularis.css">
 </head>
 
 <body>
@@ -37,10 +37,10 @@ require "connexio.php";
             $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
+               
                 ?>
-                
                 <div id="formulari-llistat">
-                  <h1>INCIDÈNCIES ASSIGNADES AL TÈCNIC</h1>
+                  <h1>INCIDÈNCIES ASSIGNADES Al TECNIC</h1>
                     <table id="taula-llistat">
                       <thead>
                         <tr>
@@ -73,14 +73,14 @@ require "connexio.php";
                     echo "<td>" . htmlspecialchars($row["NOM_TIPUS"]) . "</td>";
                     echo "<td>
                             <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a>  
-                            <a href='updateTecnics.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
+                            <a href='./updateTecnics.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
                           </td>";
                     echo "</tr>";
                 }
                 ?>
                     </table>
                         <div class="botons-update">
-                            <a class="enrera"  href="PaginaTecnic.html">Enrera</a>
+                            <a class="enrera"  href="./PaginaTecnic.html">Enrera</a>
                             <a class="enrera"  href="./llistatTecnics.php">Buscar més</a>
                         </div>
                 </div>
@@ -91,7 +91,7 @@ require "connexio.php";
                     <div id="formulari-llistat">
                         <h1>NO TENS CAP ASSIGNACIÓ</h1>
                         <div class="botons">
-                                <a class="enrera"  href="PaginaTecnic.html">Enrere</a>
+                                <a class="enrera"  href="./PaginaTecnic.html">Enrere</a>
                                 <a class="enrera"  href="./llistatTecnics.php">Buscar més</a>
                         </div>
                     </div>
@@ -113,7 +113,7 @@ require "connexio.php";
                 </div>
             </div>
             <div class="botons">
-                <a href="PaginaUsuari.html" class="enrera">Enrere</a>
+                <a href="./PaginaTecnic.html" class="enrera">Enrere</a>
                 <input type="submit" value="Envia">
             </div>
         </form>

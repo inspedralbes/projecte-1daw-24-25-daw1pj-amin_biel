@@ -1,5 +1,5 @@
 <?php
-require "connexio.php"; 
+require "../connexio.php"; 
 ?>
 
 <!DOCTYPE html>
@@ -11,8 +11,8 @@ require "connexio.php";
     <title>Llistat Administrador</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Normalize.css">
-    <link rel="stylesheet" href="DissenyFormularis.css">
+    <link rel="stylesheet" href="../Normalize.css">
+    <link rel="stylesheet" href="../DissenyFormularis.css">
 </head>
 
 <body>
@@ -65,14 +65,14 @@ require "connexio.php";
 
             echo "<td>
                     <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a> 
-                    <a href='update.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
+                    <a href='./update.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
                   </td>";
             echo "</tr>";
         }
         ?> 
         </table>
             <div class="boto-llistat">
-              <a class="enrera" href="PaginaAdministrador.html">Enrera</a>
+              <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
             </div>
         </div>
         <?php
@@ -80,9 +80,9 @@ require "connexio.php";
         ?>
         <div class="centrar">
             <div id="formulari-llistat">
-                <h1>NO TENS CAP ASSIGNACIÓ</h1>
+                <h1>NO S'HA REGISTRAT CAP INCIDENCIA</h1>
                 <div class="boto-llistat">
-                <a class="enrera" href="PaginaAdministrador.html">Pene</a>
+                <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
                 </div>
             </div>
         </div>

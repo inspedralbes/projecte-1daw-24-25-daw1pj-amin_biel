@@ -1,5 +1,5 @@
 <?php
-require "connexio.php"; 
+require "../connexio.php"; 
 
 if (!isset($_GET["id"])) {
     die("Error: No s'ha proporcionat cap ID.");
@@ -56,8 +56,8 @@ $conn->close();
     <title>Update Administrador</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Normalize.css">
-    <link rel="stylesheet" href="DissenyFormularis.css">
+    <link rel="stylesheet" href="../Normalize.css">
+    <link rel="stylesheet" href="../DissenyFormularis.css">
 </head>
 <body>
     <div class="centrar">
@@ -120,7 +120,7 @@ $conn->close();
                 </tr>
             </table>
             <div class="botons-update">
-                <a class="enrera"href="llistat.php">Tornar</a>
+                <a class="enrera"href="./llistat.php">Tornar</a>
                 <button type="submit">Guardar Canvis</button>
             </div>
         </form>

@@ -12,7 +12,12 @@ body {
     justify-content: space-between;
  }
  
- 
+ a{
+   text-decoration: none;
+ }
+ a:hover{
+   text-decoration: none;
+ }
  .logo img {
     width: 9.375rem;
     height: auto;
@@ -44,7 +49,6 @@ body {
     align-items: center;    
     text-align: center;
     margin-right: 4rem; 
-    text-decoration: none;
  }
  
  
@@ -83,7 +87,6 @@ body {
  
  
  .linkfooter {
-    text-decoration: none;
     color: #EFF6E0;
  }
  
@@ -130,7 +133,6 @@ body {
     align-items: center;    
     text-align: center;
     margin-right: 4rem; 
-    text-decoration: none;
  }
  
  
@@ -141,7 +143,6 @@ body {
  
  
  header .registrar {
-    text-decoration: none;
     color: #AEC3B0;
     margin-left: 30rem;
     transition: ease-in-out 0.5s;
@@ -154,7 +155,6 @@ body {
  
  
  header .consulta {
-    text-decoration: none;
     color: #AEC3B0;
     margin-left: -0.625rem;
     transition: ease-in-out 0.5s;
@@ -167,7 +167,6 @@ body {
  
  
  header .veure {
-    text-decoration: none;
     color: #AEC3B0;
     transition: ease-in-out 0.5s;
     margin-left: 30rem;
@@ -180,7 +179,6 @@ body {
  
  
  header .actuacio {
-    text-decoration: none;
     color: #AEC3B0;
     transition: ease-in-out 0.5s;
  }
@@ -192,7 +190,6 @@ body {
  
  
  header .tancar {
-    text-decoration: none;
     color: #AEC3B0;
     transition: ease-in-out 0.5s;
     margin-right: 2rem;
@@ -205,7 +202,6 @@ body {
  
  
  header .modificar {
-    text-decoration: none;
     color: #AEC3B0;
     transition: ease-in-out 0.5s;
     margin-left: 30rem;
@@ -218,7 +214,6 @@ body {
  
  
  header .informes {
-    text-decoration: none;
     color: #AEC3B0;
     transition: ease-in-out 0.5s;
  }
@@ -230,7 +225,6 @@ body {
  
  
  header .acces {
-    text-decoration: none;
     color: #AEC3B0;
     transition: ease-in-out 0.5s;
     margin-right: 2rem;
@@ -242,18 +236,8 @@ body {
  }
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  main {
-    gap: 1.5rem;
+   gap: 1.5rem;
  }
  
  
