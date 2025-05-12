@@ -1,11 +1,11 @@
 <?php
 require "../connexio.php"; 
 
-if (!isset($_GET["id"])) {
+if (!isset($_GET["id_incidencia"])) {
     die("Error: No s'ha proporcionat cap ID.");
 }
 
-$id_incidencia = $_GET["id"];
+$id_incidencia = $_GET["id_incidencia"];
 
 $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, I.ID_ESTAT, T.ID_TECNIC,
                D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, T.NOM_TECNIC, P.DESCRIPCIO AS NOM_PRIORITAT, TIP.DESCRIPCIO AS NOM_TIPUS
@@ -55,14 +55,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt_insert = $conn->prepare($sql_insert);
     $stmt_insert->bind_param("iiiss", $id_incidencia, $linia_actuacio, $nou_estat, $temps_invertit, $descripcio_actuacio);
-    $stmt_insert->execute();
 
     if ($stmt_update->execute()) {
-        header("Location: llistatTecnics.php?id=" . $incidencia['ID_TECNIC']);
+        // Si l'UPDATE va bé, fem el INSERT
+        $stmt_insert->execute();
+        header("Location: llistatTecnics.php?id_tecnic=" . $incidencia['ID_TECNIC']);
         exit();
     } else {
         echo "<p>Error en actualitzar la incidència: " . $conn->error . "</p>";
     }
+
 }
 
 $conn->close();
@@ -107,13 +109,8 @@ $conn->close();
             </div>    
             <div class="botons-update">
                 <a class="enrera"href="llistatTecnics.php">Tornar</a>
+                <button type='submit'>Guardar Canvis</button>;
 
-                <?php
-                /*FA FALTA MODIFICAR EL CODI PERQUE QUAN LI DONIS A GUARDAR ET MOSTRI EL LLISTAT*/
-                echo"<a href='llistatTecnics.php?id=" . $incidencia["ID_TECNIC"] . "' class='enrera'>";
-                echo"<button type='submit'>Guardar Canvis</button>";
-                echo "</a>";
-                ?>
             </div>
         </form>
     </div>

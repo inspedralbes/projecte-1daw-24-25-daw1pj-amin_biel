@@ -17,8 +17,8 @@ require "../connexio.php";
 
 <body>
     <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_tecnic"])) {
-            $id_tecnic = $_POST['id_tecnic'];
+        if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id_tecnic"])) {
+            $id_tecnic = $_GET['id_tecnic'];
 
             $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, I.ID_TIPUS_INCIDENCIA,
                    D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, T.NOM_TECNIC, T.ID_TECNIC, P.DESCRIPCIO AS NOM_PRIORITAT, TIP.DESCRIPCIO AS NOM_TIPUS
@@ -72,8 +72,8 @@ require "../connexio.php";
                     echo "<td>" . htmlspecialchars($row["NOM_PRIORITAT"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["NOM_TIPUS"]) . "</td>";
                     echo "<td>
-                            <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a>  
-                            <a href='./updateTecnics.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
+                            <a href='esborrar.php?id_incidencia=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a>  
+                            <a href='./updateTecnics.php?id_incidencia=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
                           </td>";
                     echo "</tr>";
                 }
@@ -104,7 +104,7 @@ require "../connexio.php";
             ?>
         
     <div class="centrar">
-        <form id="formulari" action="./llistatTecnics.php" method="post">
+        <form id="formulari" action="./llistatTecnics.php" method="get">
             <h1>INTRODUEIX EL TEU ID DE TÈCNIC</h1>
             <div class="descripcio">            
                 <div class="grup-input">
