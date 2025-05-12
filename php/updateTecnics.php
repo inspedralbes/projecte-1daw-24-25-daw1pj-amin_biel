@@ -49,47 +49,60 @@ $conn->close();
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <title>Editar Estat de la Incidència</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llistat d'incidències dels tècnics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Normalize.css">
+    <link rel="stylesheet" href="DissenyFormularis.css">
 </head>
 <body>
-    <h1>Editar Estat de la Incidència</h1>
+    <div class="centrar">
+        <form id="formulari-llistat"method="POST">
+            <h1>Editar Incidència</h1>
+                <table>
+                    <tr>
+                        <th>ID_INCIDENCIA</th>
+                        <th>TECNIC</th>
+                        <th>ID_TECNIC</th>
+                        <th>DEPARTAMENT</th>
+                        <th>ORDINADOR</th>
+                        <th>DATA_INICI</th>
+                        <th>DESCRIPCIÓ</th>
+                        <th>ESTAT</th>
+                        <th>PRIORITAT</th>
+                        <th>TIPUS</th>
+                    </tr>
+                    <tr>
+                        <td><?= htmlspecialchars($incidencia["ID_INCIDENCIA"]) ?></td>
+                        <td><?= htmlspecialchars($incidencia["NOM_TECNIC"]) ?></td>
+                        <td><?= isset($incidencia["ID_TECNIC"]) ? htmlspecialchars($incidencia["ID_TECNIC"]) : "" ?></td>
+                        <td><?= htmlspecialchars($incidencia["NOM_DEPARTAMENT"]) ?></td>
+                        <td><?= htmlspecialchars($incidencia["ORDINADOR"]) ?></td>
+                        <td><?= htmlspecialchars($incidencia["DATA_INICI"]) ?></td>
+                        <td><?= htmlspecialchars($incidencia["DESCRIPCIO"]) ?></td>
+                        <td>
+                            <select name="id_estat">
+                                <option value="1" <?= $incidencia["ID_ESTAT"] == 1 ? "selected" : "" ?>>Assignada</option>
+                                <option value="2" <?= $incidencia["ID_ESTAT"] == 2 ? "selected" : "" ?>>En Procés</option>
+                                <option value="3" <?= $incidencia["ID_ESTAT"] == 3 ? "selected" : "" ?>>Acabada</option>
+                            </select>
+                        </td>
+                        <td><?= htmlspecialchars($incidencia["NOM_PRIORITAT"]) ?></td>
+                        <td><?= htmlspecialchars($incidencia["NOM_TIPUS"]) ?></td>
+                    </tr>
+                </table>
+            <div class="botons-update">
+                <a class="enrera"href="llistatTecnics.php">Tornar</a>
 
-    <form method="POST">
-        <table border="1">
-            <tr>
-                <th>ID_INCIDENCIA</th>
-                <th>TECNIC</th>
-                <th>ID_TECNIC</th>
-                <th>DEPARTAMENT</th>
-                <th>ORDINADOR</th>
-                <th>DATA_INICI</th>
-                <th>DESCRIPCIÓ</th>
-                <th>ESTAT</th>
-                <th>PRIORITAT</th>
-                <th>TIPUS</th>
-            </tr>
-            <tr>
-                <td><?= htmlspecialchars($incidencia["ID_INCIDENCIA"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["NOM_TECNIC"]) ?></td>
-                <td><?= isset($incidencia["ID_TECNIC"]) ? htmlspecialchars($incidencia["ID_TECNIC"]) : "" ?></td>
-                <td><?= htmlspecialchars($incidencia["NOM_DEPARTAMENT"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["ORDINADOR"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["DATA_INICI"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["DESCRIPCIO"]) ?></td>
-                <td>
-                    <select name="id_estat">
-                        <option value="1" <?= $incidencia["ID_ESTAT"] == 1 ? "selected" : "" ?>>Assignada</option>
-                        <option value="2" <?= $incidencia["ID_ESTAT"] == 2 ? "selected" : "" ?>>En Procés</option>
-                        <option value="3" <?= $incidencia["ID_ESTAT"] == 3 ? "selected" : "" ?>>Acabada</option>
-                    </select>
-                </td>
-                <td><?= htmlspecialchars($incidencia["NOM_PRIORITAT"]) ?></td>
-                <td><?= htmlspecialchars($incidencia["NOM_TIPUS"]) ?></td>
-            </tr>
-        </table>
-        <button type="submit">Guardar Canvis</button>
-    </form>
-
-    <a href="llistatTecnics.php">Tornar al llistat</a>
+                <?php
+                /*FA FALTA MODIFICAR EL CODI PERQUE QUAN LI DONIS A GUARDAR ET MOSTRI EL LLISTAT*/
+                echo"<a href='llistatTecnics.php?id=" . $incidencia["ID_TECNIC"] . "' class='enrera'>";
+                echo"<button type='submit'>Guardar Canvis</button>";
+                echo "</a>";
+                ?>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
