@@ -25,7 +25,7 @@ require "../connexio.php";
             JOIN TECNICS T ON I.ID_TECNIC = T.ID_TECNIC
             JOIN PRIORITAT P ON I.ID_PRIORITAT = P.ID_PRIORITAT
             JOIN TIPUS_INCIDENCIA TIP ON I.ID_TIPUS_INCIDENCIA = TIP.ID_TIPUS
-            ORDER BY I.ID_INCIDENCIA ASC";
+            ORDER BY I.ID_PRIORITAT DESC, I.DATA_INICI ASC"; 
 
     $result = $conn->query($sql);
 
@@ -51,7 +51,9 @@ require "../connexio.php";
             </thead>
         <?php
         while ($row = $result->fetch_assoc()) {
-            echo "<tr>";
+            $classe_prioritat = "prioritat-" . str_replace(" ", "", $row["NOM_PRIORITAT"]); 
+            
+            echo "<tr class='$classe_prioritat'>";
             echo "<td>" . htmlspecialchars($row["ID_INCIDENCIA"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["NOM_TECNIC"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["ID_TECNIC"]) . "</td>";
