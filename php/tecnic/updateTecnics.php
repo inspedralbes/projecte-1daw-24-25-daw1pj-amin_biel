@@ -101,7 +101,6 @@ $conn->close();
             <div class="dades">
                 <div class="grup-input">
                     <select name="id_estat">
-                        <option value="1" <?= $incidencia["ID_ESTAT"] == 1 ? "selected" : "" ?>>Assignada</option>
                         <option value="2" <?= $incidencia["ID_ESTAT"] == 2 ? "selected" : "" ?>>En Procés</option>
                         <option value="3" <?= $incidencia["ID_ESTAT"] == 3 ? "selected" : "" ?>>Acabada</option>
                     </select>
