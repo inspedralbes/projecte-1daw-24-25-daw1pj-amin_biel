@@ -1,63 +1,47 @@
 body{
+    background-color: #01161E;
     width: 100%;
     height: 100vh;
-    background-color: #01161E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/FonsLandingPage.png);
     font-family: "Montserrat", sans-serif;
-    background-image: url(img/Fons.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
 }
-
-a{
-    text-decoration: none;
+.contenidor{
+    margin-bottom: 2rem;;
 }
-a:hover{
-    text-decoration: none;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+main{
     text-align: center;
+    width: 60%;
 }
-
-.contenidor {
-    display: flex;
-    justify-content: center;  
-    align-items: center;     
-    text-align: center;
-  }
-
 main h1{
     color: #EFF6E0;
     font-size: 4rem;
-    margin-bottom: 1rem;
-    margin-top: 10rem;
+    font-weight: bolder;
+    margin: 0;
 }
-
 main h3{
     color: #AEC3B0;
-    margin-bottom: 3rem;
+    font-weight: bold;
 }
-
-main .funcionament{
-    background-color: #EFF6E0;
-    border: #EFF6E0 solid 0.5px;
-    border-radius: 35px;;
-    padding: 0.75rem;
+.btn-link{
+    text-decoration: none;
     color: #01161E;
-    transition: ease-in-out 0.5s;
-    justify-content: center;  
-    align-items: center;     
-    text-align: center;
-    margin-top: -1rem;
-    
+    background-color: #EFF6E0;
+    padding: 1.5rem 3rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: solid #EFF6E0 1px;
+    transition: 0.5s ease-in-out;
 }
-
-main .funcionament:hover{
+.btn-link:hover{
+    background-color: rgb(0,0,0,0);
+    text-decoration: none;
     color: #EFF6E0;
-    background-color: rgb(0, 0, 0, 0.0);
+}
+.btn-link:focus{
+    text-decoration: none;
 }
