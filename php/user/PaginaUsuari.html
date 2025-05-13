@@ -11,44 +11,35 @@
     <link rel="stylesheet" href="../DissenyPaginesContingut.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./img/Logo.png" alt="Logo">
+    <nav class="navbar navbar-default fixed-top navbar-expand">
+        <div class="ml-auto d-flex">
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="./crear.php">Registrar Incidència</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="./llistatUsuari.php">Consulta l'Estat d'Incidència</a>
+                </li>
+            </ul>
+            <a class="boto" href="../PaginaDescobreixmes.html">Log out</a>
         </div>
-        <a href="./crear.php" class="registrar">Registrar Incidència</a>
-        <a href="./llistatUsuari.php" class="consulta">Consulta l'Estat d'Incidència</a>
-        <a href="../PaginaDescobreixmes.html" class="logout"><b>Log out</b></a>
-    </header>
+    </nav>
 
     <main>
-        <section class="registre-incidencia">
-            <div class="bloc text">Text informatiu</div>
-            <div class="bloc contingut">Escriure la incidència</div>
-            <button class="enviar">Envia la incidència</button>
-        </section>
-    
-        <section class="consulta-incidencia">
-            <div class="bloc text">Text Informatiu</div>
-            <div class="bloc contingut">Consulta el numero d'incidència</div>
-            <button class="enviar">Consulta l'estat</button>
-        </section>
+        <section><h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum voluptas accusamus, non sequi exercitationem natus voluptates quisquam reprehenderit. Dolor odit quidem similique, placeat laborum quae laboriosam dignissimos dolores maiores corporis!</h1></section>
     </main>
     
     
-    <footer>
-        <div class="primeralinea">
-            <ul>
-                <li><a href="#" class="linkfooter">Sobre Nosaltres</a></li>
-                <li><a href="#" class="linkfooter">Ubicació</a></li>
-                <li><a href="#" class="linkfooter">Web Institut Pedralbes</a></li>
-                <br>
-                <br>
-                <hr>
-                <br>
-                <li>© 2025 Amin&Biel</li>
-                <li><a href="#" class="linkfooter">Privacitat</a></li>
-            </ul>
+    <footer class="container-fluid bottom">
+        <div class="container-xl">
+        <div class="d-flex justify-content-between align-items-center flex-wrap primera-linia mb-3">
+            <a href="https://maps.app.goo.gl/rch4SSVa6s2Ms3MH6" target="_blank">Ubicació</a>
+            <p class="mb-0 text-center flex-grow-1">Gràcies per Visitar la nostre pàgina!</p>
+            <a href="https://www.institutpedralbes.cat/" target="_blank">Web Institut</a>
         </div>
+        <hr>
+        <p class="text-center mb-0">© 2025 Amin&Biel</p>
+    </div>
     </footer>
 </body>
 </html>
