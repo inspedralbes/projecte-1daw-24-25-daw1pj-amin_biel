@@ -103,7 +103,6 @@ input[type="radio"]:checked+label {
     position:static;
 }
 .grup-input .input-label{
-
     font-size: 0.75rem;
     color:#124559;
     font-weight: 700;
@@ -209,6 +208,15 @@ table {
     border: solid #124559 2px;
     border-radius: 15px;
     display: block;
+    overflow: hidden; 
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
 }
 
 table th, table td {
@@ -219,7 +227,7 @@ table th, table td {
     border-left: 1px dotted #124559;
 }
 
-table tr:first-child th{
+table tr:first-child th {
     border-top: none;
 }
 
@@ -229,8 +237,29 @@ table tr th:first-child {
 }
 
 .links-update{
-    color: #598392;
+    color: #124559;
 }
 .links-update:hover{
-    color: #AEC3B0;
+    color: #01161E;
+    font-weight: bold;
+}
+
+.prioritat-Crítica, .prioritat-Alta, .prioritat-Mitjana, .prioritat-Baixa, .prioritat-SenseAssignar {
+    color: #01161E
+}
+
+.prioritat-Crítica { 
+    background-color: #ff4d4d; 
+}
+.prioritat-Alta { 
+    background-color: #ffad33; 
+}
+.prioritat-Mitjana { 
+    background-color: #ffff66; 
+}
+.prioritat-Baixa { 
+    background-color: #99ff99; 
+}
+.prioritat-SenseAssignar { 
+    background-color: #cccccc; 
 }
