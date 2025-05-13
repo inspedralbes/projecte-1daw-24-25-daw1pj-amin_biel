@@ -1,6 +1,11 @@
-body,html{
+html {
+    height: 100%;
+}
+body{
+   position: relative;
    height: 100%;
    width: 100%;
+   min-height: 100vh;
    background-color: #01161E;
    background-image: url(img/Fons.jpg);
    font-family: "Montserrat", sans-serif;
@@ -50,21 +55,21 @@ a:hover{
 }
 
 main{
+   margin-bottom: 7rem;
    padding: 2rem;
    margin-top: 5rem;
-   flex: 1;
 }
 .introduccio{
    width: 90%;
    margin-bottom: 2rem;
 }
-main h1{
+.introduccio h1{
    font-size: 3rem;
    width: 50%;
    color: #EFF6E0;
    font-weight: bolder;
 }
-main h4{
+.introduccio h4{
    color: #AEC3B0;
 }
 .btn-link{
@@ -82,10 +87,14 @@ main h4{
 }
 
 footer{
+   position: absolute;
+   bottom: 0;
    height: 7rem;
    background-color: #01161E;
    color: #EFF6E0;
+   padding: 1rem 0;
 }
+
 footer hr{
    background-color: #EFF6E0;
 }
@@ -101,4 +110,8 @@ footer a{
 footer a:hover{
    color:#EFF6E0;
    font-weight: bold;
+}
+.diferent{
+   background-color: #01161E;
+   padding: 2rem;
 }
