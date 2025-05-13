@@ -27,7 +27,7 @@ require "../connexio.php";
     if ($result->num_rows > 0) {
         ?>
             <div id="formulari-llistat">
-            <h1>Informes Actuacions dels Tècnics</h1>
+            <h1>Actuacions dels Tècnics</h1>
             <table id="taula-llistat">
             <thead>
                 <tr>
