@@ -94,29 +94,30 @@ $conn->close();
                     <td>
                         <div class="grup-input">
                             <select name="id_prioritat">
-                                <option value="1">Cap</option>
-                                <option value="2">Baixa</option>
-                                <option value="3">Mitjana</option>
-                                <option value="4">Alta</option>
-                                <option value="5">Crítica</option>
+                                <option value="1" <?= $incidencia["ID_PRIORITAT"] == 1 ? "selected" : "" ?>>Cap</option>
+                                <option value="2" <?= $incidencia["ID_PRIORITAT"] == 2 ? "selected" : "" ?>>Baixa</option>
+                                <option value="3" <?= $incidencia["ID_PRIORITAT"] == 3 ? "selected" : "" ?>>Mitjana</option>
+                                <option value="4" <?= $incidencia["ID_PRIORITAT"] == 4 ? "selected" : "" ?>>Alta</option>
+                                <option value="5" <?= $incidencia["ID_PRIORITAT"] == 5 ? "selected" : "" ?>>Crítica</option>
                             </select>
                         </div>
                     </td>
                     <td>
                         <div class="grup-input">
                             <select name="id_tipus">
-                                <option value="1">Sense Assignar</option>
-                                <option value="2">Xarxa</option>
-                                <option value="3">Ratolí</option>
-                                <option value="4">Teclat</option>
-                                <option value="5">Connexió a Internet</option>
-                                <option value="6">Pantalla</option>
-                                <option value="7">Software</option>
-                                <option value="8">Servidor</option>
-                                <option value="9">Correu Electrònic</option>
+                                <option value="1" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 1 ? "selected" : "" ?>>Sense Assignar</option>
+                                <option value="2" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 2 ? "selected" : "" ?>>Xarxa</option>
+                                <option value="3" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 3 ? "selected" : "" ?>>Ratolí</option>
+                                <option value="4" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 4 ? "selected" : "" ?>>Teclat</option>
+                                <option value="5" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 5 ? "selected" : "" ?>>Connexió a Internet</option>
+                                <option value="6" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 6 ? "selected" : "" ?>>Pantalla</option>
+                                <option value="7" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 7 ? "selected" : "" ?>>Software</option>
+                                <option value="8" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 8 ? "selected" : "" ?>>Servidor</option>
+                                <option value="9" <?= $incidencia["ID_TIPUS_INCIDENCIA"] == 9 ? "selected" : "" ?>>Correu Electrònic</option>
                             </select>
                         </div>
                     </td>
+
                 </tr>
             </table>
             <div class="botons-update">
