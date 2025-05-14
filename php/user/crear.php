@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $row = $result->fetch_assoc();
     $id_departament = $row['ID_DEPARTAMENT'];      
 
-    $checkDuplicate = $conn->query("SELECT ID_INCIDENCIA FROM INCIDENCIES WHERE ID_DEPARTAMENT = '$id_departament' AND DESCRIPCIO = '$descripcio'");
+    $checkDuplicate = $conn->query("SELECT ID_INCIDENCIA FROM INCIDENCIES WHERE ID_DEPARTAMENT = '$id_departament' AND ORDINADOR = '$ordinador'");
     if ($checkDuplicate->num_rows > 0) { 
         echo "<div id='formulari-llistat'>";
         echo '<p>Ja existeix una incidència similar registrada en aquest departament.</p>';
