@@ -30,8 +30,8 @@ require "../connexio.php";
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo '<div id="formulari">';
-    
+    echo '<div id="formulari-llistat">';
+
     if (empty($_POST['cicles']) || empty($_POST['descripcio']) || empty($_POST['ordinador'])) {
         die("<p style='color: red;'>Error: Has d'omplir tots els camps abans d'enviar.</p><a href='crear.php'>Tornar</a>");
     }
@@ -48,6 +48,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $row = $result->fetch_assoc();
     $id_departament = $row['ID_DEPARTAMENT'];      
 
+    $checkDuplicate = $conn->query("SELECT ID_INCIDENCIA FROM INCIDENCIES WHERE ID_DEPARTAMENT = '$id_departament' AND DESCRIPCIO = '$descripcio'");
+    if ($checkDuplicate->num_rows > 0) { 
+        echo "<div id='formulari-llistat'>";
+        echo '<p>Ja existeix una incidència similar registrada en aquest departament.</p>';
+        echo '<a href="crear.php" class="enrera">Tornar</a>';
+        echo "</div>";
+        exit;
+    }
+
     $resultat = $conn->query("SELECT ID_TECNIC FROM TECNICS WHERE ID_DEPARTAMENT = '$id_departament'");
     if ($resultat->num_rows === 0) {
         die("<p style='color: red;'>Error: No hi ha cap tècnic assignat a aquest departament.</p><a href='crear.php'>Tornar</a>");
@@ -60,10 +69,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($conn->query($sql)) {
         $id_incidencia = $conn->insert_id;
-        echo "<h1>  LA TEVA INCIDÈNCIA HA ESTAT REGISTRADA CORRECTAMENT!</h1>";
+        echo "<h1>LA TEVA INCIDÈNCIA HA ESTAT REGISTRADA CORRECTAMENT!</h1>";
         echo "<p>El codi de la teva incidència és: <strong>$id_incidencia</strong></p>";
     } else {
-        echo "<p style='color: red;'>Error en registrar la incidència: " . $conn->error . "</p>";
+        echo "<p>Error en registrar la incidència: " . $conn->error . "</p>";
     }
 
     echo '<div class="botons">';
@@ -76,46 +85,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1>DEPARTAMENTS</h1>
         <div class="departaments">
             <fieldset>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="mates" value="Matemàtiques">
-                    <label for="mates">Matemàtiques</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="ciencies" value="Ciències Naturals">
-                    <label for="ciencies">Ciències Naturals</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="tecnologia" value="Tecnologia">
-                    <label for="tecnologia">Tecnologia</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="llengues" value="Llengües">
-                    <label for="llengues">Llengües</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="socials" value="Ciències Socials">
-                    <label for="socials">Ciències Socials</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="edfisica" value="Educació Física">
-                    <label for="edfisica">Educació Física</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="arts" value="Arts Plàstiques">
-                    <label for="arts">Arts Plàstiques</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="musica" value="Música">
-                    <label for="musica">Música</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="informatica" value="Informàtica">
-                    <label for="informatica">Informàtica</label>
-                </div>
-                <div class="opcio">
-                    <input type="radio" name="cicles" id="biblioteca" value="Biblioteca">
-                    <label for="biblioteca">Biblioteca</label>
-                </div>
+                <div class="opcio"><input type="radio" name="cicles" id="mates" value="Matemàtiques"><label for="mates">Matemàtiques</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="ciencies" value="Ciències Naturals"><label for="ciencies">Ciències Naturals</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="tecnologia" value="Tecnologia"><label for="tecnologia">Tecnologia</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="llengues" value="Llengües"><label for="llengues">Llengües</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="socials" value="Ciències Socials"><label for="socials">Ciències Socials</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="edfisica" value="Educació Física"><label for="edfisica">Educació Física</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="arts" value="Arts Plàstiques"><label for="arts">Arts Plàstiques</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="musica" value="Música"><label for="musica">Música</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="informatica" value="Informàtica"><label for="informatica">Informàtica</label></div>
+                <div class="opcio"><input type="radio" name="cicles" id="biblioteca" value="Biblioteca"><label for="biblioteca">Biblioteca</label></div>
             </fieldset>
         </div>
 
