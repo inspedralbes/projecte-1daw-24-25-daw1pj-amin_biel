@@ -1,117 +1,90 @@
-html {
-    height: 100%;
+html, body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
 }
 body{
-   position: relative;
    height: 100%;
    width: 100%;
-   min-height: 100vh;
-   background-color: #01161E;
    background-image: url(img/Fons.jpg);
    font-family: "Montserrat", sans-serif;
    background-repeat: no-repeat;
    background-size: cover;
+   background-attachment: fixed;
    display: flex;
-   margin: 0;
    flex-direction: column;
 }
-.navbar-default{
-   background-color:rgb(18, 69, 89, 0.9);
-   text-align: right;
-   height: 5rem;
+a:hover, .btn-link:hover{
+   text-decoration: none;
 }
-.navbar-default a{
+nav a{
    color: #AEC3B0;
 }
-.navbar-default a:hover{
+nav a:hover{
+   color: #EFF6E0;
+   font-weight: bold;
+}
+nav{
+   background-color: rgb(18, 69, 89, 0.9);
+   height: 6rem;
+}
+.btn{
+   background-color: #EFF6E0;
+   border-radius: 50px;
+   padding: 0.75rem 2rem;
+   border: solid #EFF6E0 1px;
+   transition: 0.5 ease-in-out;
+   color:#01161E;
+   font-weight: bold;
+}
+.btn:hover{
+   background-color: rgb(0,0,0,0);
    color: #EFF6E0
 }
-.navbar-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar-default li {
-  display: inline;
-}
-a{
-   text-decoration: none;
-}
-a:hover{
-   text-decoration: none;
-}
 
-.navbar-default .boto{
-   background-color: #EFF6E0;
-   color: #01161E;
-   padding: 0.5rem 2rem;
-   border-radius: 50px;
-   border: solid 1px #EFF6E0;
-   transition: 0.5s ease-in-out; 
-}
-.navbar-default a:hover{
-   color: #EFF6E0;
-   background-color: rgb(0, 0, 0,0);
-}
 
 main{
-   margin-bottom: 7rem;
-   padding: 2rem;
-   margin-top: 5rem;
+   flex: 1;
+   padding: 6rem 0 0 0;
 }
-.introduccio{
-   width: 90%;
-   margin-bottom: 2rem;
-}
-.introduccio h1{
-   font-size: 3rem;
-   width: 50%;
+main h1{
    color: #EFF6E0;
    font-weight: bolder;
 }
-.introduccio h4{
+main h4{
    color: #AEC3B0;
 }
-.btn-link{
-   background-color: #EFF6E0;
-   border-radius: 50px;
-   color:#01161E;
-   padding: 1rem 2rem;
-   border: solid #EFF6E0 1px;
-   transition: 0.5s ease-in-out;
+section > .btn{
+   margin-top: 1rem;
 }
-.btn-link:hover{
-   text-decoration: none;
-   background-color: rgb(0, 0, 0,0);
-   color: #EFF6E0
+section{
+   margin-bottom: 3rem;
+   padding: 2rem 3rem 2rem;
+}
+section:last-child{
+   padding-bottom: 1rem;
 }
 
 footer{
-   position: absolute;
-   bottom: 0;
-   height: 7rem;
    background-color: #01161E;
-   color: #EFF6E0;
-   padding: 1rem 0;
+   height: auto;
 }
-
-footer hr{
+footer a, footer p{
+   color: #EFF6E0;
+}
+main hr{
+   width: 50%;
+}
+hr{
    background-color: #EFF6E0;
 }
-.primera-linia{
-   margin-top: 1rem
+footer .primera-linia{
+   padding-top: 1rem;
 }
-footer p{
-   margin-bottom: 1rem;
-}
-footer a{
-   color: #EFF6E0;
+footer .segona-linia{
+   padding-bottom: 1rem;
 }
 footer a:hover{
-   color:#EFF6E0;
-   font-weight: bold;
-}
-.diferent{
-   background-color: #01161E;
-   padding: 2rem;
+   font-weight: bolder;
+   color: #EFF6E0
 }
