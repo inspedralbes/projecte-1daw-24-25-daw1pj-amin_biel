@@ -36,6 +36,8 @@ main h3{
     border-radius: 50px;
     border: solid #EFF6E0 1px;
     transition: 0.5s ease-in-out;
+    animation: animacioBoto 3s;
+    animation-iteration-count: infinite;
 }
 .btn-link:hover{
     background-color: rgb(0,0,0,0);
@@ -44,4 +46,16 @@ main h3{
 }
 .btn-link:focus{
     text-decoration: none;
+}
+
+@keyframes animacioBoto {
+        0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
