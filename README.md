@@ -18,3 +18,4 @@
 
 
 ![Diagrama_de_casos_d'ús](https://github.com/user-attachments/assets/d9dacb84-2089-4146-9a72-e1f41edaa467)
+![Diagrama de casos d'ús](https://drive.google.com/file/d/1RjbLZuAOFR9MJZkwgnbnhcmt5FhhRZIg/view?usp=drive_link).
