@@ -16,7 +16,8 @@ Aquest és el nostre diagrama de casos d'ús per al projecte. Representa les fun
 
 3. **I per Administrador** es modificarà la incidència, es consultarà informes i es consultarà les estadístiques d'accés.
 
-![Diagrama_de_casos_d'ús](https://github.com/user-attachments/assets/d9dacb84-2089-4146-9a72-e1f41edaa467)
+- ![Diagrama de casos d'ús ](https://github.com/user-attachments/assets/c2808011-e8ff-43b2-9f52-ec7b65faeafb)
+
 
 ## MODEL ENTITAT-RELACIÓ
 
