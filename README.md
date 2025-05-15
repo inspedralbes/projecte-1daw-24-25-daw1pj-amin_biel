@@ -17,5 +17,5 @@
 3. I per Administrador es modificarà la incidència, es consultarà informes i es consultarà les estadístiques d'accés.
 
 
-![Diagrama_de_casos_d'ús](https://github.com/user-attachments/assets/d9dacb84-2089-4146-9a72-e1f41edaa467)
-![Diagrama de casos d'ús](https://drive.google.com/file/d/1RjbLZuAOFR9MJZkwgnbnhcmt5FhhRZIg/view?usp=drive_link).
+![Diagrama de casos d'ús  drawio](https://github.com/user-attachments/assets/3f532e0e-1281-46d8-82dd-a5be8724c402)
+
