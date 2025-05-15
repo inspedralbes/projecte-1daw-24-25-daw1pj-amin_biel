@@ -18,4 +18,4 @@
 
 
 
-![Diagrama de casos d'ús ](https://github.com/user-attachments/assets/1c521f0b-f87a-4b6b-b9cc-157f1ff0a45f)
+- ![Diagrama de casos d'ús ](https://github.com/user-attachments/assets/1c521f0b-f87a-4b6b-b9cc-157f1ff0a45f)
