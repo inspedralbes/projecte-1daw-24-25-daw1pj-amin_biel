@@ -44,8 +44,15 @@ This app is made by Amin and Biel, and in these manual we are going to explain h
 ## ACCESS TO THE WEBSITE
 When you enter our website, you will see the landing page. In the middle of the app, there is a button to access the main website.
 
+![Capt_LadingPage](php/img/Captura_LandingPage.png)
+
+
 ## FIRST PAGE
 Once you are on the first page, you will find a brief explanation about the website and a login button to enter the app based on your role.
+
+![Capt_PaginaPrincipal](php/img/Captura_PrimeraPag.png)
+
+![Capt_LoginPage](php/img/Captura_LoginPage.png)
 
 ## USER PAGE: How to Report an IT Issue
 There are 2 main functions on this page:
@@ -55,6 +62,7 @@ There are 2 main functions on this page:
 - **Follow all your reports:**
  After making a report, you will need to provide your email address. This will allow you to track the progress of your reports, such as the status of the issue and how many times technicians have worked on it.
 
+![Capt_User](php/img/Captura_User.png)
 
 
 ## TECHNICIAN PAGE: How to Manage Assignments
@@ -63,6 +71,7 @@ On the technician page, there is 1 main function:
  To see your assignments, enter your technician ID (the one provided by the school). The page will display all your assignments, sorted by priority.
  If you want to close a report or report an action, there is a button that redirects you to a form. In this form, you will need to describe the action taken, the time spent on it, and whether the issue is resolved or still ongoing.
 
+![Capt_Tecnics](php/img/Captura_Tecnics.png)
 
 ## ADMIN PAGE: Managing Reports and Assignments
 The admin page has 3 main functions:
@@ -74,3 +83,5 @@ The admin page has 3 main functions:
 
 - **See the total number of reports and actions per department:**
  This page provides statistics about the number of issues reported by each department.
+
+![Capt_Admin](php/img/Captura_Admin.png)
