@@ -91,7 +91,6 @@ $conn->close();
                 <textarea id="descripcio" class="descripcio-input" placeholder="La meva actuació ha sigut..." name="descripcio_actuacio"></textarea>
             </div>  
             <h1>TEMPS INVERTIT</h1>
-
             <div class="descripcio">
                 <div class="grup-input">
                     <label for="temps_invertit" class="input-label">Temps invertit (HH:MM):</label>
@@ -109,7 +108,7 @@ $conn->close();
             </div>    
             <div class="botons-update">
                 <a class="enrera"href="llistatTecnics.php">Tornar</a>
-                <button type='submit'>Guardar Canvis</button>;
+                <button type='submit'>Guardar Canvis</button>
 
             </div>
         </form>
