@@ -22,5 +22,14 @@
         echo "<p>Error de connexió: " . htmlspecialchars($conn->connect_error) . "</p>";
         die("Error de connexió: " . $conn->connect_error);
     }
+    
+    require 'vendor/autoload.php';
+
+$uri = "mongodb+srv://a24biedommar:d327418d@projecteaminbielmongo.q5prnml.mongodb.net/?retryWrites=true&w=majority&appName=ProjecteAminBielMongo";
+
+$client = new MongoDB\Client($uri);
+
+$collection = $client->demo->users;
+
 
     ?>

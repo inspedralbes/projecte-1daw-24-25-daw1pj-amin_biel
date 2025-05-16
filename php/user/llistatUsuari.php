@@ -1,5 +1,13 @@
 <?php
 require "../connexio.php"; 
+include "../funcioMongo.php";
+
+$Usuari = 'Usuari';
+$data = date('Y-m-d H:i:s');
+$ipUsuari = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$paginaUsuari = 'Llistar Incidencies';
+
+insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_incidencia"])) {
     $id_incidencia = $_POST["id_incidencia"];

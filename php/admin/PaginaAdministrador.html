@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid d-flex justify-content-between align-items-center">
-            <h1 class="my-0" >Pàgina de l'Administrador</h1>
+            <h1 class="my-0" >Administrador</h1>
             <div class="d-flex align-items-center">
                 <ul class="navbar-nav d-flex mb-0">
                     <li class="nav-item mx-2">
@@ -24,35 +24,39 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="./informesDepartaments.php">Informes Departaments</a>
                     </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="./llistatMongo.php">Informes dels Logs</a>
+                    </li>
                 </ul>
                 <button type="button" class="btn btn-link " onclick="window.location.href='../PaginaDescobreixmes.html';">Log out</button>
             </div>
         </div>
     </nav>
 
-    
-
     <main>
         <section class="introduccio">
             <h1>Llistat d'Incidencies</h1>
-            <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam omnis, quis maxime eum libero doloremque ad. Aperiam cumque maiores a assumenda repudiandae, delectus laboriosam reprehenderit? Optio reiciendis magni nisi reprehenderit?</h4>
+            <h4>Aquí pots veure totes les incidències reportades per tots els usuaris.</h4>
             <button type="button" class="btn btn-link" onclick="window.location.href='llistat.php';">Llistat d'Incidenciès</button>
         </section>
         <hr>
         <section class="introduccio">
             <h1>Informes dels Tecnics</h1>
-            <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam omnis, quis maxime eum libero doloremque ad. Aperiam cumque maiores a assumenda repudiandae, delectus laboriosam reprehenderit? Optio reiciendis magni nisi reprehenderit?</h4>
+            <h4>Aquesta secció mostra els informes generats pels tècnics sobre les incidències resoltes.</h4>
             <button type="button" class="btn btn-link" onclick="window.location.href='informesTecnics.php';">Informes dels Tècnics</button>
         </section>
         <hr>
         <section class="introduccio">
             <h1>Informes dels Departaments</h1>
-            <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam omnis, quis maxime eum libero doloremque ad. Aperiam cumque maiores a assumenda repudiandae, delectus laboriosam reprehenderit? Optio reiciendis magni nisi reprehenderit?</h4>
+            <h4>Aquí pots veure les estadístiques i informes relacionats amb els departaments i les seves incidències.</h4>
             <button type="button" class="btn btn-link" onclick="window.location.href='informesDepartaments.php';">Informes Departaments</button>
         </section>
-
-        
-        
+        <hr>
+        <section class="introduccio">
+            <h1>Informes dels Logs</h1>
+            <h4>Consulta els registres del sistema per analitzar l'activitat,i fer seguiment dels esdeveniments.</h4>
+            <button type="button" class="btn btn-link" onclick="window.location.href='llistatMongo.php';">Informes Departaments</button>
+        </section>
 
     </main>
 
