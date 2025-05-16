@@ -66,7 +66,7 @@ require "../connexio.php";
             echo "<td>" . htmlspecialchars($row["NOM_TIPUS"]) . "</td>";
 
             echo "<td>
-                    <a href='esborrar.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a> 
+                    <a href='delete.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a> 
                     <a href='./update.php?id=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
                   </td>";
             echo "</tr>";
