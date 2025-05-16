@@ -14,7 +14,7 @@ body{
    display: flex;
    flex-direction: column;
 }
-a:hover, .btn-link:hover{
+a:hover, .btn-link:hover, a:focus, .btn-link:focus{
    text-decoration: none;
 }
 nav a{

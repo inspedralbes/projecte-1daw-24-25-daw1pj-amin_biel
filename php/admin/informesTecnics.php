@@ -63,17 +63,28 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
             echo "<td>" . htmlspecialchars($row["TEMPS_INVERTIT"]) . "</td>";
             echo "</tr>";
         }
-
+        
         echo "</table>";
+        ?>
+        <div class="boto-llistat">
+                <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
+        </div>
+        <?php
     } else {
-        echo "<p>No hi ha registres d'actuacions per mostrar.</p>";
+        ?>
+        <div class="centrar">
+            <div id="formulari-llistat">
+                <h1>NO S'HA REGISTRAT CAP ACTUACIO</h1>
+                <div class="boto-llistat">
+                <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
+                </div>
+            </div>
+        </div>
+        <?php
     }
 
     $conn->close();
     ?>
 
-    <div class="boto-llistat">
-        <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>        
-    </div>
 </body>
 </html>

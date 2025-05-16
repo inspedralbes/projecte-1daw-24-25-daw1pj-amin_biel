@@ -58,13 +58,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id_departament = $row['ID_DEPARTAMENT'];      
 
     $checkDuplicate = $conn->query("SELECT ID_INCIDENCIA FROM INCIDENCIES WHERE ID_DEPARTAMENT = '$id_departament' AND ORDINADOR = '$ordinador'");
-    if ($checkDuplicate->num_rows > 0) { 
-        echo "<div id='formulari-llistat'>";
-        echo '<p>Ja existeix una incidència similar registrada en aquest departament.</p>';
-        echo '<a href="crear.php" class="enrera">Tornar</a>';
-        echo "</div>";
-        exit;
-    }
+   if ($checkDuplicate->num_rows > 0) { 
+    ?>
+    </div>
+    <div class="centrar">
+        <div id="formulari-llistat">
+            <h1>JA HI HA UNA INCIDENCIA IGUAL REGISTRADA</h1>
+            <div class="boto-llistat">
+                <a class="enrera" href="./crear.php">Tornar</a>
+            </div>
+        </div>
+    </div>
+    <?php
+    exit;
+}
 
     $resultat = $conn->query("SELECT ID_TECNIC FROM TECNICS WHERE ID_DEPARTAMENT = '$id_departament'");
     if ($resultat->num_rows === 0) {
@@ -77,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             VALUES ('$id_departament', SYSDATE(), '$descripcio', '$ordinador', '$id_tecnic')";
 
     if ($conn->query($sql)) {
+        
         $id_incidencia = $conn->insert_id;
         echo "<h1>LA TEVA INCIDÈNCIA HA ESTAT REGISTRADA CORRECTAMENT!</h1>";
         echo "<p>El codi de la teva incidència és: <strong>$id_incidencia</strong></p>";
