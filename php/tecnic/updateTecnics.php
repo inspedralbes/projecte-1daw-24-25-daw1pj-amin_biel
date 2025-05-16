@@ -5,6 +5,7 @@ if (!isset($_GET["id_incidencia"])) {
     die("Error: No s'ha proporcionat cap ID.");
 }
 
+
 $id_incidencia = $_GET["id_incidencia"];
 
 $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, I.ID_ESTAT, T.ID_TECNIC,

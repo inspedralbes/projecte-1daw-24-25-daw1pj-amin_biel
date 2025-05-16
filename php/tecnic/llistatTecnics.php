@@ -28,6 +28,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
         if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id_tecnic"])) {
             $id_tecnic = $_GET['id_tecnic'];
 
+            // Afegim l'ordre perquè les incidències de "Crítica" apareguin primer
             $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, I.ID_TIPUS_INCIDENCIA,
                    D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, T.NOM_TECNIC, T.ID_TECNIC, P.DESCRIPCIO AS NOM_PRIORITAT, TIP.DESCRIPCIO AS NOM_TIPUS
             FROM INCIDENCIES I
@@ -37,7 +38,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
             JOIN PRIORITAT P ON I.ID_PRIORITAT = P.ID_PRIORITAT
             JOIN TIPUS_INCIDENCIA TIP ON I.ID_TIPUS_INCIDENCIA = TIP.ID_TIPUS
             WHERE I.ID_TECNIC = ?
-            ORDER BY I.ID_INCIDENCIA ASC";
+            ORDER BY I.ID_PRIORITAT DESC, I.DATA_INICI ASC"; // Ordenem per prioritat de Crítica a Cap
             
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("i", $id_tecnic);
@@ -45,7 +46,6 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
             $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
-               
                 ?>
                 <div id="formulari-llistat">
                   <h1>INCIDÈNCIES ASSIGNADES Al TECNIC</h1>
@@ -67,8 +67,10 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
                       </thead>
                 <?php
                 while ($row = $result->fetch_assoc()) { 
-                    
-                    echo "<tr>";
+                    // Assignem la classe CSS per als colors de prioritat
+                    $classe_prioritat = "prioritat-" . str_replace(" ", "", $row["NOM_PRIORITAT"]); 
+
+                    echo "<tr class='$classe_prioritat'>";
                     echo "<td>" . htmlspecialchars($row["ID_INCIDENCIA"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["NOM_TECNIC"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["ID_TECNIC"]) . "</td>";
@@ -80,7 +82,6 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
                     echo "<td>" . htmlspecialchars($row["NOM_PRIORITAT"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["NOM_TIPUS"]) . "</td>";
                     echo "<td>
-                            <a href='esborrar.php?id_incidencia=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Esborrar</a>  
                             <a href='./updateTecnics.php?id_incidencia=" . $row["ID_INCIDENCIA"] . "' class='links-update'>Editar</a>
                           </td>";
                     echo "</tr>";
@@ -108,7 +109,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
             }
         
             $conn->close();
-        }else{
+        } else {
             ?>
         
     <div class="centrar">

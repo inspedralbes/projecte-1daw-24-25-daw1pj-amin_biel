@@ -26,7 +26,6 @@ There are 2 main functions on this page:
 
 ![Capt_User](php/img/Captura_User.png)
 
-
 ## TECHNICIAN PAGE: How to Manage Assignments
 On the technician page, there is 1 main function:
 - **See all your assignments:**
