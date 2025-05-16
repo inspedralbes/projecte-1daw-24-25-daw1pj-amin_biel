@@ -1,10 +1,10 @@
 <?php
 
 // Configuració de la connexió a la base de dades
-    $servername = "db"; // Nom del servei definit al docker-compose.yaml
-    $username = "usuari"; // Usuari definit al docker-compose.yaml
-    $password = "paraula_de_pas"; // Contrasenya definida al docker-compose.yaml
-    $dbname = "persones"; // Nom de la base de dades
+    $servername = "daw.inspedralbes.cat"; // Nom del servei definit al docker-compose.yaml
+    $username = "a24biedommar_AminBiel"; // Usuari definit al docker-compose.yaml
+    $password = "qZ68U+X#gsQqc7a9"; // Contrasenya definida al docker-compose.yaml
+    $dbname = "a24biedommar_ProjecteFinal_MySql"; // Nom de la base de dades
     
     // Quan ja tingueu un codi una mica depurat, i vulgueu fer la gestió dels errors
     // vosaltres mateixos heu de desactivar el comportament predeterminat de mysqli 
@@ -25,11 +25,11 @@
     
     require 'vendor/autoload.php';
 
-$uri = "mongodb+srv://a24biedommar:d327418d@projecteaminbielmongo.q5prnml.mongodb.net/?retryWrites=true&w=majority&appName=ProjecteAminBielMongo";
+    $uri = "mongodb+srv://a24biedommar:d327418d@projecteaminbielmongo.q5prnml.mongodb.net/?retryWrites=true&w=majority&appName=ProjecteAminBielMongo";
 
-$client = new MongoDB\Client($uri);
+    $client = new MongoDB\Client($uri);
 
-$collection = $client->demo->users;
+    $collection = $client->demo->users;
 
 
     ?>
