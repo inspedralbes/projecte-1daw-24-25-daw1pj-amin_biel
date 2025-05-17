@@ -23,7 +23,6 @@ Aquest és el nostre diagrama de casos d'ús per al projecte. Representa les fun
 
 El model entitat-relació mostra com s'estructuren i com es relacionen les diferents entitats dins del nostre sistema de recopilació d'incidències.
 
-- **Usuari**: Persona que pot crear o veure incidències.  
 - **Incidència**: És el problema a tractar.  
 - **Prioritat**: Depenent de quin tipus d'incidència es tracti (depenent del que l'usuari introdueixi en el formulari).  
 - **Tipus d'incidència**: Segons la descripció de l'usuari, la incidència serà d'un tipus o d'un altre (de software, el ratolí, el teclat, etc.)  

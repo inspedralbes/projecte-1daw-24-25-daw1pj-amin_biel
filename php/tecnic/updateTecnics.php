@@ -83,35 +83,33 @@ $conn->close();
     <link rel="stylesheet" href="../DissenyFormularis.css">
 </head>
 <body>
-    <div class="centrar">
-        <form id="formulari-llistat"method="POST">
-            <h1>DESCRIPCIO ACTUACIÓ</h1>
-            <div class="descripcio">
-                <label for="descripcio" class="descripcio-label"></label>
-                <textarea id="descripcio" class="descripcio-input" placeholder="La meva actuació ha sigut..." name="descripcio_actuacio"></textarea>
-            </div>  
-            <h1>TEMPS INVERTIT</h1>
-            <div class="descripcio">
-                <div class="grup-input">
-                    <label for="temps_invertit" class="input-label">Temps invertit (HH:MM):</label>
-                    <input type="time" id="temps_invertit" class="input-dintre" name="temps_invertit" required>
-                </div>
-            </div>    
-            <h1>UPDATE ACTUACIO</h1>
-            <div class="dades">
-                <div class="grup-input">
-                    <select name="id_estat">
-                        <option value="2" <?= $incidencia["ID_ESTAT"] == 2 ? "selected" : "" ?>>En Procés</option>
-                        <option value="3" <?= $incidencia["ID_ESTAT"] == 3 ? "selected" : "" ?>>Acabada</option>
-                    </select>
-                </div>    
-            </div>    
-            <div class="botons-update">
-                <a class="enrera"href="llistatTecnics.php">Tornar</a>
-                <button type='submit'>Guardar Canvis</button>
-
+    <form id="formulari-llistat"method="POST">
+        <h1>DESCRIPCIO ACTUACIÓ</h1>
+        <div class="descripcio">
+            <label for="descripcio" class="descripcio-label"></label>
+            <textarea id="descripcio" class="descripcio-input" placeholder="La meva actuació ha sigut..." name="descripcio_actuacio"></textarea>
+        </div>  
+        <h1>TEMPS INVERTIT</h1>
+        <div class="descripcio">
+            <div class="grup-input">
+                <label for="temps_invertit" class="input-label">Temps invertit (HH:MM):</label>
+                <input type="time" id="temps_invertit" class="input-dintre" name="temps_invertit" required>
             </div>
-        </form>
-    </div>
+        </div>    
+        <h1>UPDATE ACTUACIO</h1>
+        <div class="dades">
+            <div class="grup-input">
+                <select name="id_estat">
+                    <option value="2" <?= $incidencia["ID_ESTAT"] == 2 ? "selected" : "" ?>>En Procés</option>
+                    <option value="3" <?= $incidencia["ID_ESTAT"] == 3 ? "selected" : "" ?>>Acabada</option>
+                </select>
+            </div>    
+        </div>    
+        <div class="botons-update">
+            <a class="enrera"href="llistatTecnics.php">Tornar</a>
+            <button type='submit'>Guardar Canvis</button>
+
+        </div>
+    </form>
 </body>
 </html>
