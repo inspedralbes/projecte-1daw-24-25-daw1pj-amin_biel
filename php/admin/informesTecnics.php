@@ -67,7 +67,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
         echo "</table>";
         ?>
         <div class="boto-llistat">
-                <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
+                <a class="enrera" href="./PaginaAdministrador.php">Enrere</a>
         </div>
         <?php
     } else {
@@ -76,7 +76,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
             <div id="formulari-llistat">
                 <h1>NO S'HA REGISTRAT CAP ACTUACIO</h1>
                 <div class="boto-llistat">
-                <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
+                <a class="enrera" href="./PaginaAdministrador.php">Enrere</a>
                 </div>
             </div>
         </div>

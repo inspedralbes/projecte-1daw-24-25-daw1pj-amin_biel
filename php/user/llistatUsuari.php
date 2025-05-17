@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_incidencia"])) {
                     <h1>Estat de la teva incidència</h1>
                     <p><strong>Estat:</strong> <?= htmlspecialchars($incidencia["NOM_ESTAT"]) ?></p>
                     <div class="botons">
-                            <a class="enrera"  href="./PaginaUsuari.html">Enrere</a>
+                            <a class="enrera"  href="./PaginaUsuari.php">Enrere</a>
                             <a class="enrera"  href="./llistatUsuari.php">Buscar més</a>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_incidencia"])) {
             <div id="formulari-llistat">
                 <h1>No s'ha trobat cap incidència</h1>
                 <div class="botons">
-                        <a class="enrera"  href="./PaginaUsuari.html">Enrere</a>
+                        <a class="enrera"  href="./PaginaUsuari.php">Enrere</a>
                         <a class="enrera"  href="./llistatUsuari.php">Buscar més</a>
                 </div>
             </div>
@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_incidencia"])) {
                     </div>
                 </div>  
                 <div class="botons">
-                    <a href="./PaginaUsuari.html" class="enrera">Enrere</a>
+                    <a href="./PaginaUsuari.php" class="enrera">Enrere</a>
                     <input type="submit" value="Consultar">
                 </div>           
             </form>

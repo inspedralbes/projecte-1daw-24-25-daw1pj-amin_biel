@@ -41,7 +41,7 @@ $documents = $collection->find();
                 </tbody>
             </table>
             <div class="boto-llistat">
-                <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
+                <a class="enrera" href="./PaginaAdministrador.php">Enrere</a>
             </div>
         </div>
     <?php else: ?>
@@ -49,7 +49,7 @@ $documents = $collection->find();
             <div id="formulari-llistat">
                 <h1>NO S'HAN TROBAT REGISTRES</h1>
                 <div class="boto-llistat">
-                    <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
+                    <a class="enrera" href="./PaginaAdministrador.php">Enrere</a>
                 </div>
             </div>
         </div>

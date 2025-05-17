@@ -89,7 +89,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
                 ?>
                     </table>
                         <div class="botons-update">
-                            <a class="enrera"  href="./PaginaTecnic.html">Enrera</a>
+                            <a class="enrera"  href="./PaginaTecnic.php">Enrera</a>
                             <a class="enrera"  href="./llistatTecnics.php">Buscar més</a>
                         </div>
                 </div>
@@ -100,7 +100,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
                     <div id="formulari-llistat">
                         <h1>NO TENS CAP ASSIGNACIÓ</h1>
                         <div class="botons">
-                                <a class="enrera"  href="./PaginaTecnic.html">Enrere</a>
+                                <a class="enrera"  href="./PaginaTecnic.php">Enrere</a>
                                 <a class="enrera"  href="./llistatTecnics.php">Buscar més</a>
                         </div>
                     </div>
@@ -122,7 +122,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
                 </div>
             </div>
             <div class="botons">
-                <a href="./PaginaTecnic.html" class="enrera">Enrere</a>
+                <a href="./PaginaTecnic.php" class="enrera">Enrere</a>
                 <input type="submit" value="Envia">
             </div>
         </form>

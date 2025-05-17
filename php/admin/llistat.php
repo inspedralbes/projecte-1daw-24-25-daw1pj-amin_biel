@@ -82,7 +82,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
         ?> 
         </table>
             <div class="boto-llistat">
-              <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
+              <a class="enrera" href="./PaginaAdministrador.php">Enrere</a>
             </div>
         </div>
         <?php
@@ -92,7 +92,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
             <div id="formulari-llistat">
                 <h1>NO S'HA REGISTRAT CAP INCIDENCIA</h1>
                 <div class="boto-llistat">
-                <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>
+                <a class="enrera" href="./PaginaAdministrador.php">Enrere</a>
                 </div>
             </div>
         </div>

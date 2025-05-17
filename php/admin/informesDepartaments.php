@@ -60,7 +60,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
     ?>
 
     <div class="boto-llistat">
-        <a class="enrera" href="./PaginaAdministrador.html">Enrere</a>        
+        <a class="enrera" href="./PaginaAdministrador.php">Enrere</a>        
     </div>
 </body>
 </html>

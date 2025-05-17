@@ -80,7 +80,7 @@ require "../connexio.php";
         ?>
             </table>
                 <div class="boto-llistat">
-                    <a class="enrera"  href="PaginaUsuari.html">Enrera</a>
+                    <a class="enrera"  href="PaginaUsuari.php">Enrera</a>
                 </div>
         </div>
         <?php
@@ -90,7 +90,7 @@ require "../connexio.php";
         <h1>NO HI HAN INCIDENCIES</h1>
             <div id="formulari"></div>
                 <div class="boto-llistat">
-                        <a class="enrera"  href="PaginaUsuari.html">Enrera</a>
+                        <a class="enrera"  href="PaginaUsuari.php">Enrera</a>
                 </div>
             </div>    
         </div>

@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     echo '<div class="botons">';
-    echo '<a href="./PaginaUsuari.html" class="enrera">Enrere</a>';
+    echo '<a href="./PaginaUsuari.php" class="enrera">Enrere</a>';
     echo '<a href="./crear.php" class="enrera">Inserir una altra</a>';
     echo '</div></div>';
 } else {
@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <div class="botons">
-            <a href="./PaginaUsuari.html" class="enrera">Enrere</a>
+            <a href="./PaginaUsuari.php" class="enrera">Enrere</a>
             <input type="submit" value="Envia">
         </div>
     </form>
