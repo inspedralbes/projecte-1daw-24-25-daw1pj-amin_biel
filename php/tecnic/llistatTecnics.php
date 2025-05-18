@@ -89,7 +89,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
                 ?>
                     </table>
                         <div class="botons-update">
-                            <a class="enrera"  href="./PaginaTecnic.php">Enrera</a>
+                            <a class="enrera"  href="./PaginaTecnic.php">Enrere</a>
                             <a class="enrera"  href="./llistatTecnics.php">Buscar més</a>
                         </div>
                 </div>

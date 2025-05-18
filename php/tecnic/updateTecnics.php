@@ -5,8 +5,7 @@ if (!isset($_GET["id_incidencia"])) {
     die("Error: No s'ha proporcionat cap ID.");
 }
 
-
-$id_incidencia = $_GET["id_incidencia"];
+$id_incidencia = intval($_GET["id_incidencia"]);
 
 $sql = "SELECT I.ID_INCIDENCIA, I.DATA_INICI, I.DESCRIPCIO, I.ORDINADOR, I.ID_ESTAT, T.ID_TECNIC,
                D.DESCRIPCIO AS NOM_DEPARTAMENT, E.DESCRIPCIO AS NOM_ESTAT, T.NOM_TECNIC, P.DESCRIPCIO AS NOM_PRIORITAT, TIP.DESCRIPCIO AS NOM_TIPUS
@@ -27,6 +26,7 @@ $incidencia = $result->fetch_assoc();
 if (!$incidencia) {
     die("Error: La incidència no existeix.");
 }
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     /*obtenim el id de la linia actuacio*/ 
@@ -80,23 +80,29 @@ $conn->close();
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Normalize.css">
-    <link rel="stylesheet" href="../DissenyFormularis.css">
-</head>
+    <link rel="stylesheet" href="../DissenyFormularis.css"></head>
 <body>
-    <form id="formulari-llistat"method="POST">
-        <h1>DESCRIPCIO ACTUACIÓ</h1>
+    <form id="formulari-llistat" method="POST">
+        <h1>CONSULTA LA INCIDÈNCIA</h1>
+        
+        <h6>Codi d'Incidència: <strong><?= htmlspecialchars($incidencia["ID_INCIDENCIA"]) ?></strong></h6>
+        <h6>Tipus d'incidència: <strong><?= htmlspecialchars($incidencia["NOM_TIPUS"]) ?></strong></h6>
+
+        <h1>DESCRIPCIÓ ACTUACIÓ</h1>
         <div class="descripcio">
             <label for="descripcio" class="descripcio-label"></label>
             <textarea id="descripcio" class="descripcio-input" placeholder="La meva actuació ha sigut..." name="descripcio_actuacio"></textarea>
-        </div>  
+        </div> 
+
         <h1>TEMPS INVERTIT</h1>
         <div class="descripcio">
             <div class="grup-input">
                 <label for="temps_invertit" class="input-label">Temps invertit (HH:MM):</label>
                 <input type="time" id="temps_invertit" class="input-dintre" name="temps_invertit" required>
             </div>
-        </div>    
-        <h1>UPDATE ACTUACIO</h1>
+        </div> 
+
+        <h1>UPDATE ACTUACIÓ</h1>
         <div class="dades">
             <div class="grup-input">
                 <select name="id_estat">
@@ -104,11 +110,11 @@ $conn->close();
                     <option value="3" <?= $incidencia["ID_ESTAT"] == 3 ? "selected" : "" ?>>Acabada</option>
                 </select>
             </div>    
-        </div>    
-        <div class="botons-update">
-            <a class="enrera"href="llistatTecnics.php">Tornar</a>
-            <button type='submit'>Guardar Canvis</button>
+        </div> 
 
+        <div class="botons-update">
+            <a class="enrera" href="llistatTecnics.php">Enrere</a>
+            <button type='submit'>Guardar Canvis</button>
         </div>
     </form>
 </body>
