@@ -74,7 +74,8 @@ a:hover{
 }
 
 input[type="radio"]{
-    display: none;
+    position: absolute;
+    opacity: 0;
 }
 
 fieldset label {
@@ -87,7 +88,7 @@ fieldset label {
     border: solid 1px #124559;
     padding: 0.5rem 2rem;
 }
-input[type="radio"]:checked+label {
+input[type="radio"]:checked+label, input[type="radio"]:focus+label  {
     background-color: #124559;
     color: #EFF6E0;
     border-color: #124559;

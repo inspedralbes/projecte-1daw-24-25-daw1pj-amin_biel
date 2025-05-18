@@ -17,20 +17,3 @@ Aquest és el nostre diagrama de casos d'ús per al projecte. Representa les fun
 3. **I per Administrador** es modificarà la incidència, es consultarà informes i es consultarà les estadístiques d'accés.
 
 - ![Diagrama de casos d'ús ](https://github.com/user-attachments/assets/c2808011-e8ff-43b2-9f52-ec7b65faeafb)
-
-
-# MODEL ENTITAT-RELACIÓ
-
-El model entitat-relació mostra com s'estructuren i com es relacionen les diferents entitats dins del nostre sistema de recopilació d'incidències.
-
-- **Incidència**: És el problema a tractar.  
-- **Prioritat**: Depenent de quin tipus d'incidència es tracti (depenent del que l'usuari introdueixi en el formulari).  
-- **Tipus d'incidència**: Segons la descripció de l'usuari, la incidència serà d'un tipus o d'un altre (de software, el ratolí, el teclat, etc.)  
-- **Estat**: Aquesta entitat fa referència a l'estat en el qual es troba la incidència.  
-- **Tècnic**: Persona encarregada de resoldre incidències.  
-- **Departament**: Cada incidència té associat un departament.  
-- **Actuació**: Els tècnics, cada cop que arreglin o avancin en resoldre una incidència, ho faran mitjançant aquesta entitat.  
-
-*A continuació mostrem el diagrama que representa aquestes entitat i les seves relacions i atributs.*
-
-![Model_Entitat-Relació](php/img/Model_Entitat-Relació.png)
