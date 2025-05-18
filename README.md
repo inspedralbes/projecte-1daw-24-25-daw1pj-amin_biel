@@ -1,7 +1,4 @@
-# README del Projecte Biel & Amin
-
-Aquest és el nostre README, on es troben els nostres diagrames de casos d'ús, el model entitat-relació i el manual dús de l'usuari.
-  
+# README del Projecte Biel & Amin  
 
 # DIAGRAMA DE CASOS D'ÚS
 Aquest és el nostre diagrama de casos d'ús per al projecte. Representa les funcionalitats clau i com interactuen els diferents actors amb el sistema.
