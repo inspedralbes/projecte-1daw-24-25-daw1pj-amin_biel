@@ -14,12 +14,34 @@
 <body class="d-flex justify-content-center align-items-center min-vh-100">
   <main class="w-100 px-3 text-center">
     <div class="contenidor">
-      <h1 class="display-4 display-sm-5">Incidencies Amin & Biel</h1>
+      <h1 class="ml2 display-4 display-sm-5">Incidencies Amin & Biel</h1>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     </div>
     <div class="contenidor">
       <h3 class="fs-5 fs-sm-6">Benvingut a la nostra web de gestió d'incidències informàtiques</h3>
     </div>
     <button type="button" class="btn btn-link" onclick="window.location.href='PaginaDescobreixmes.php';">Descobreix Més</button>
   </main>
+  <script>
+    var textWrapper = document.querySelector('.ml2');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+      .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: (el, i) => 70*i
+      }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+  </script>
 </body>
 </html>
