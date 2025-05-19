@@ -182,8 +182,9 @@ input[type="submit"],button[type="submit"]{
 }
 .enrera, input[type="submit"], .continuar, button[type="submit"]{
     background-color: #01161E;
-    color: #EFF6E0;
+    color: #FFFFFF;
     padding: 1rem;
+    font-weight: bold;
     height: 3rem;
     border-radius: 10px;
     transition: 0.2s ease-in-out

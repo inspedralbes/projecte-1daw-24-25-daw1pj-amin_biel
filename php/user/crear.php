@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form id="formulari" action="./crear.php" method="post" onsubmit="return validarFormulari()">
         <h1>DEPARTAMENTS</h1>
         <div class="departaments">
-            <fieldset>
+            <fieldset >
                 <div class="opcio"><input type="radio" name="cicles" id="mates" value="Matemàtiques"><label for="mates">Matemàtiques</label></div>
                 <div class="opcio"><input type="radio" name="cicles" id="ciencies" value="Ciències Naturals"><label for="ciencies">Ciències Naturals</label></div>
                 <div class="opcio"><input type="radio" name="cicles" id="tecnologia" value="Tecnologia"><label for="tecnologia">Tecnologia</label></div>
@@ -118,6 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <h1>DESCRIPCIÓ INCIDÈNCIA</h1>
         <div class="descripcio">
+            <label for="descripcio">Escriu una breu descripció de la teva incidència</label>
             <textarea id="descripcio" name="descripcio" placeholder="El problema que tinc és..." required></textarea>
             <div class="grup-input">
                 <label for="ordinador" class="input-label">Nº Ordinador</label>
