@@ -37,7 +37,7 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
     </script>
 </head>
 <body>
-
+<main>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo '<div id="formulari-llistat">';
@@ -134,5 +134,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <?php
 }
 ?>
+</main>
 </body>
 </html>

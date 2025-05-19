@@ -190,7 +190,7 @@ input[type="submit"],button[type="submit"]{
     transition: 0.2s ease-in-out
 
 }
-input[type="submit"]:hover ,.enrera:hover, .continuar:hover,button[type="submit"]:hover{
+input[type="submit"]:hover ,.enrera:hover, .continuar:hover,button[type="submit"]:hover,input[type="submit"]:focus ,.enrera:focus, .continuar:focus,button[type="submit"]:focus{
     border-radius: 25px;
 }
 option, select{

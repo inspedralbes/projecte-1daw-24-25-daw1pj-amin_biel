@@ -1,16 +1,36 @@
-# README del Projecte Biel & Amin  
+# ReadMe Grup 1  
 
-# DIAGRAMA DE CASOS D'ÚS
-Aquest és el nostre diagrama de casos d'ús per al projecte. Representa les funcionalitats clau i com interactuen els diferents actors amb el sistema.
-- Aquesta aplicació web té com a objectiu millorar la gestió i resolució d'incidències tècniques dins d'una organització. Els usuaris poden registrar incidències, consultar-ne l'estat i seguir el seu progrés fins a la resolució. L'aplicació també proporciona eines per als tècnics i administradors, que poden gestionar les incidències i consultar informes detallats.
+## Integrants del projecte
+- Amin Oulad - [a24amioulabi@inspedralbes.cat](mailto:a24amioulabi@inspedralbes.cat)
+- Biel Domínguez - [a24biedommar@inspedralbes.cat](mailto:a24biedommar@inspedralbes.cat)
 
+## Objectiu del projecte
+L'objectiu del projecte és desenvolupar una aplicació web que permeti crear i gestionar incidències informàtiques simulant un entorn real (en aquest cas, un institut).
 
-## FUNCIONALITATS PRINCIPALS:
+## Estat del projecte
+- Part obligatòria completada.
+- Bootstrap integrat a pàgines de navegació, però no als formularis ni als llistats.
+- Disseny web cuidat per millorar l’experiència.
+- Falta la part opcional de login i personalització de contingut per a l'usuari.
 
-1. **Per a Usuari General** es registrarà una nova incidència i es consultarà l'estat de la incidència.
+## Adreça web del projecte desplegat
+[Visita el projecte](http://gp1.daw.inspedralbes.cat/)
 
-2. **Per a Tècnic** es veurà les incidències assignades, registrar l'actuació i es tancarà la incidència.
+## Enllaç a l'eina de prototipatge (Figma)
+[Prototipatge a Figma](https://www.figma.com/design/DGJu2XQFMBCOGdD5l7ZIOc/Untitled?node-id=0-1&t=3PXltCjqCQ5liSdL-1)
 
-3. **I per Administrador** es modificarà la incidència, es consultarà informes i es consultarà les estadístiques d'accés.
+Hi ha algunes pantalles del projecte que al final hem modificat o estructurat diferent, però el flux de pantalles és el mateix.
 
-- ![Diagrama de casos d'ús ](https://github.com/user-attachments/assets/c2808011-e8ff-43b2-9f52-ec7b65faeafb)
+## Exportacions de les pantalles del prototip
+### Landing page
+![Landing Page](./php/img/doc_prototip/1-Landing%20page.png)
+### Pàgina inicial
+![Pàgina inicial](./php/img/doc_prototip/2-Pàgina%20Principal.png)
+### Pàgina de login
+![Login](./php/img/doc_prototip/3-Log%20in%20Page.png)
+### Pàgina d'usuari/tècnics/administrador (mateix format)
+![Usuaris](./php/img/doc_prototip/4-Pàgina%20Usuaris.png)
+### Pàgina per crear una incidència
+![Formulari](./php/img/doc_prototip/5-Pàgina%20Formularis.png)
+### Pàgina dels llistats
+![Llistats](./php/img/doc_prototip/6-Pàgina%20Llistat.png)
