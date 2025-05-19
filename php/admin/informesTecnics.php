@@ -15,7 +15,8 @@ insertLogs($collection, $Usuari, $data, $ipUsuari ,$paginaUsuari);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informes Actuacions dels Tècnics</title>
+    <title>Informes Tècnics - Amin&Biel</title>
+    <link rel="icon" type="image/x-icon" href="../img/LogoInsp.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Normalize.css">
