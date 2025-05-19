@@ -6,7 +6,8 @@ html, body {
 body{
    height: 100%;
    width: 100%;
-   background-image: url(img/Fons.jpg);
+   background-color: #01161E;
+   background-image: url(./img/FonsFormulari.png);
    font-family: "Montserrat", sans-serif;
    background-repeat: no-repeat;
    background-size: cover;

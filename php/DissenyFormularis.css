@@ -3,7 +3,7 @@ body{
     height: 100%;
     background-color: #01161E;
     font-family: "Montserrat", sans-serif;
-    background-image: url(img/FonsFormulari.png);
+    background-image: url(./img/FonsFormulari.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -16,7 +16,7 @@ body{
     height: 100vh;
     background-color: #01161E;
     font-family: "Montserrat", sans-serif;
-    background-image: url(img/FonsFormulari.png);
+    background-image: url(./img/FonsFormulari.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
