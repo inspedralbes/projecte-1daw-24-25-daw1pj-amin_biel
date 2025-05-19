@@ -35,7 +35,7 @@ On the technician page, there is 1 main function:
 ![Capt_Tecnics](../php/img/Captura_Tecnics.png)
 
 ## ADMIN PAGE: Managing Reports and Assignments
-The admin page has 3 main functions:
+The admin page has 4 main functions:
 - **See all the reports:**
  Here, you can view all the reports and their details, including which technician is responsible, the department, and more. You can also edit reports. Specifically, you can change the assigned technician, set or change the priority, and define the type of issue (e.g., mouse, monitor, software, etc.).
 
